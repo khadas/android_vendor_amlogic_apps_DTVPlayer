@@ -1880,9 +1880,9 @@ public class DTVScanDvbsConfig  extends DTVActivity {
 		final EditText edittext_low = (EditText) window.findViewById(R.id.edittext_lnb_low);
 		final EditText edittext_high = (EditText) window.findViewById(R.id.edittext_lnb_high); 
 		final EditText edittext_threshold = (EditText)window.findViewById(R.id.edittext_lnb_threshold);
-		edittext_low.setFilters(new  android.text.InputFilter[]{ new  android.text.InputFilter.LengthFilter(7)});
-		edittext_high.setFilters(new  android.text.InputFilter[]{ new  android.text.InputFilter.LengthFilter(7)});
-		edittext_threshold.setFilters(new  android.text.InputFilter[]{ new  android.text.InputFilter.LengthFilter(7)});
+		edittext_low.setFilters(new  android.text.InputFilter[]{ new  android.text.InputFilter.LengthFilter(8)});
+		edittext_high.setFilters(new  android.text.InputFilter[]{ new  android.text.InputFilter.LengthFilter(8)});
+		edittext_threshold.setFilters(new  android.text.InputFilter[]{ new  android.text.InputFilter.LengthFilter(8)});
 
 		final CheckBox checkboxSwitch = (CheckBox)window.findViewById(R.id.checkSwitch);
 		final LinearLayout user_mode_layout = (LinearLayout)window.findViewById(R.id.user_mode_layout);
