@@ -51,14 +51,15 @@ public class DTVTimeshifting extends DTVActivity{
 		MENUS[menu.SHORTCUT_AUDIO_TRACK.ordinal()] = R.string.audio_track;
 		MENUS[menu.SHORTCUT_PICTURE_MODE.ordinal()] = R.string.picture_mode;
 		MENUS[menu.EXIT_PLAYER.ordinal()] = R.string.exit_player;
-		setContentView(R.layout.dtvtimeshiftplayer); 
+		setContentView(R.layout.dtvtimeshiftplayer);
+		openVideo();
 		mDTVSettings= new DTVSettings(this);
 	}
 
 	public void onConnected(){
 		Log.d(TAG, "connected");
 		super.onConnected();
-		openVideo();
+		//openVideo();
 		/* there may be a conflict in startTimeshifting, so
 		 * we need to sovle the RECORD_CONFLICT message.
 		 */

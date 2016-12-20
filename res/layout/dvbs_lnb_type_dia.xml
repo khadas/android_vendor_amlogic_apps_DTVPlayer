@@ -21,7 +21,7 @@
 		android:layout_height="34dp"
 		android:layout_gravity="center_horizontal"
 		android:text="@string/enter_password"
-		android:textColor="#FFFFFFFF"
+		android:textColor="@color/white"
 		android:gravity="center"
 		android:textSize="24sp" 
 		android:layout_marginTop="20dp"
@@ -48,6 +48,7 @@
 				android:id="@+id/text_info"
 				android:layout_width="350px"
 				android:textSize="20sp"
+				android:textColor="@color/white"
 				android:layout_height="wrap_content"
 				android:layout_gravity="center_vertical"
 				android:singleLine="true"/>
@@ -64,6 +65,7 @@
 				android:layout_height="wrap_content"
 				android:layout_gravity="center_vertical"
 				android:singleLine="true"
+				android:textColor="@color/white"
 				android:text="@string/dish_setup_conf_lnb_user_mode"/>
 
 			 <CheckBox
@@ -86,6 +88,7 @@
 				android:layout_height="wrap_content"
 				android:layout_gravity="center_vertical"
 				android:singleLine="true"
+				android:textColor="@color/white"
 				android:text="@string/dish_setup_conf_lnb_lof"/>
 
 			<Button
@@ -116,11 +119,13 @@
 					android:layout_height="wrap_content"
 					android:layout_gravity="center_vertical"
 					android:singleLine="true"
+					android:textColor="@color/white"
 					android:text="@string/dish_setup_conf_lnb_low"/>
 				<EditText android:id="@+id/edittext_lnb_low"
 					android:layout_width="200px"
 					android:layout_height="wrap_content"
 					android:singleLine="true"
+					android:textColor="@color/white"
 					android:numeric="integer"/>
 			</LinearLayout>
 
@@ -134,12 +139,14 @@
 				<TextView
 					android:layout_width="200px"
 					android:textSize="20sp"
+					android:textColor="@color/white"
 					android:layout_height="wrap_content"
 					android:layout_gravity="center_vertical"
 					android:singleLine="true"
 					android:text="@string/dish_setup_conf_lnb_high"/>
 				<EditText android:id="@+id/edittext_lnb_high"
 					android:layout_width="200px"
+					android:textColor="@color/white"
 					android:layout_height="wrap_content"
 					android:singleLine="true"
 					android:numeric="integer"/>
@@ -155,11 +162,13 @@
 					android:layout_height="wrap_content"
 					android:layout_gravity="center_vertical"
 					android:singleLine="true"
+					android:textColor="@color/white"
 					android:text="@string/dish_setup_conf_lnb_threshold"/>
 				<EditText android:id="@+id/edittext_lnb_threshold"
 					android:layout_width="200px"
 					android:layout_height="wrap_content"
 					android:singleLine="true"
+					android:textColor="@color/white"
 					android:numeric="integer"/>
 			</LinearLayout>
 		</LinearLayout>

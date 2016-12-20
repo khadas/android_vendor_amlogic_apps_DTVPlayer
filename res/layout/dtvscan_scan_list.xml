@@ -9,7 +9,8 @@
 		android:layout_gravity="center_vertical"
 		android:gravity="center"
 		android:layout_width="60px"
-		android:layout_height="40px" 
+		android:layout_height="40px"
+		android:textColor="@color/white"
 		android:textSize="20sp"
 		>
 	</TextView>
@@ -18,7 +19,8 @@
 		android:layout_gravity="center_vertical"
 		android:gravity="center"
 		android:layout_width="270px"
-		android:layout_height="40px" 
+		android:layout_height="40px"
+		android:textColor="@color/white" 
 		android:textSize="20sp"
 		>
 	</TextView>

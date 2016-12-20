@@ -14,7 +14,7 @@
         android:layout_width="match_parent"
         android:layout_height="50px"
         android:layout_gravity="center_horizontal"
-        android:textColor="#FFFFFFFF"
+        android:textColor="@color/white"
  		android:gravity="center"
         android:textSize="32px" 
         android:layout_marginTop="30px"
@@ -43,6 +43,7 @@
 	        android:paddingLeft="20dp"
 	        android:textSize="30px" 
 	        android:singleLine="true"
+	        android:textColor="@color/white"
 	        android:text="@string/vchip_rrt_dimensions_values"
 			/>
 		
@@ -55,6 +56,7 @@
 	    	android:textSize="30px"
 		  	android:layout_gravity="center_vertical"
 		  	android:singleLine="true"
+		  	android:textColor="@color/white"
 		  	android:text="@string/vchip_rrt_dimensions_abbrev"
 	    	/>
 
@@ -65,6 +67,7 @@
 			android:padding="8px"
 			android:textSize="30px" 
 	        android:singleLine="true"
+	        android:textColor="@color/white"
 	        android:text="@string/vchip_rrt_dimensions_status"
 	        />	
 		    
@@ -145,7 +148,7 @@
 		        android:layout_height="wrap_content"
 		        android:layout_gravity="center"
 		        android:text="@string/help_info_move"
-		        android:textColor="#FFFFFFFF"
+		        android:textColor="@color/white"
 		        android:textSize="30px" 
 		        android:layout_marginRight="30px"
 		        />
@@ -159,7 +162,7 @@
 		        android:layout_height="wrap_content"
 		        android:layout_gravity="center"
 		        android:text="@string/help_info_select"
-		        android:textColor="#FFFFFFFF"
+		        android:textColor="@color/white"
 		        android:textSize="30px"
 		        android:layout_marginRight="30px"
 		        />
@@ -173,7 +176,7 @@
 		        android:layout_height="wrap_content"
 		        android:layout_gravity="center"
 		        android:text="@string/help_info_return"
-		        android:textColor="#FFFFFFFF"
+		        android:textColor="@color/white"
 		        android:textSize="30px" />
 
 		    <RelativeLayout

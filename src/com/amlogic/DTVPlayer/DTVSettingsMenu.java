@@ -858,6 +858,7 @@ public class DTVSettingsMenu extends DTVActivity {
 								}
 
 								if(isHaveExternalStorage()){
+									stopPlaying();
 									Intent Intent_timeshifting = new Intent();
 									Intent_timeshifting.setClass(DTVSettingsMenu.this,DTVTimeshifting.class);
 									startActivity(Intent_timeshifting);
@@ -945,6 +946,7 @@ public class DTVSettingsMenu extends DTVActivity {
 								}
 
 								if(isHaveExternalStorage()){
+									stopPlaying();
 									Intent Intent_timeshifting = new Intent();
 									Intent_timeshifting.setClass(DTVSettingsMenu.this,DTVTimeshifting.class);
 									startActivity(Intent_timeshifting);
@@ -3157,7 +3159,7 @@ public class DTVSettingsMenu extends DTVActivity {
 	private void showSatellitesDB(List<String> list){
 		final List<String> filelist = list;
 
-		final Dialog mDialog = new AlertDialog(this){
+		final Dialog mDialog = new AlertDialog(this, AlertDialog.THEME_HOLO_DARK){
 			@Override
 			public boolean onKeyDown(int keyCode, KeyEvent event){
 				 switch (keyCode) {
@@ -3642,6 +3644,7 @@ public class DTVSettingsMenu extends DTVActivity {
 		builder.setTitle(R.string.edit_title);
 		TextView desFreText =(TextView) view.findViewById(R.id.edit_fre);
 		editText.setText(desFreText.getText().toString());
+		editText.setTextColor(Color.WHITE);
 		builder.setView(editText);
 
 		AlertDialog alert = builder.create();
@@ -5669,7 +5672,7 @@ public class DTVSettingsMenu extends DTVActivity {
 		editText.setFilters(new  android.text.InputFilter[]{ new  android.text.InputFilter.LengthFilter(6)});
 		TextView desFreText = (TextView) view;
 		editText.setText(desFreText.getText().toString());
-
+		editText.setTextColor(Color.WHITE);
 		Button no = (Button)window.findViewById(R.id.no);
 		no.setText(R.string.no);
 		Button yes = (Button)window.findViewById(R.id.yes);
@@ -5773,11 +5776,15 @@ public class DTVSettingsMenu extends DTVActivity {
 		editText.setFilters(new  android.text.InputFilter[]{ new  android.text.InputFilter.LengthFilter(6)});
 		TextView desFreText = (TextView) view;
 		editText.setText(desFreText.getText().toString());
-
+		editText.setTextColor(Color.WHITE);
+		
 		Button no = (Button)window.findViewById(R.id.no);
 		no.setText(R.string.no);
+		no.setTextColor(Color.WHITE);
+
 		Button yes = (Button)window.findViewById(R.id.yes);
 		yes.setText(R.string.yes);
+		no.setTextColor(Color.WHITE);
 
 		no.setFocusableInTouchMode(true);
 		no.setOnClickListener(new OnClickListener(){
@@ -6237,6 +6244,7 @@ public class DTVSettingsMenu extends DTVActivity {
 			public void onCheckPasswordIsRight(){
 				Log.d(TAG,">>>>>PASSWORD IS RIGHT!<<<<<");
 				if(isHaveExternalStorage()){
+					stopPlaying();
 					Intent Intent_timeshifting = new Intent();
 					Intent_timeshifting.setClass(DTVSettingsMenu.this,DTVTimeshifting.class);
 					startActivity(Intent_timeshifting);

@@ -10,6 +10,7 @@
 		android:layout_width="260px"
 		android:layout_height="40px" 
 		android:textSize="20sp"
+		android:textColor="@color/white"
 		android:layout_marginLeft="60px"
 	/>
 	<ImageView
@@ -25,6 +26,7 @@
 	<TextView android:id="@+id/info"
 		android:layout_width="100px"
 		android:layout_height="40px" 
+		android:textColor="@color/white"
 		android:textSize="20sp"
 		android:visibility="invisible"
 		android:gravity="center"

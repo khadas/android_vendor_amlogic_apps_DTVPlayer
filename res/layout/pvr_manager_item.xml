@@ -15,7 +15,8 @@
 	  	android:layout_gravity="center_vertical"
 	  	android:singleLine="true"
 	  	android:ellipsize="marquee"  
-      	android:marqueeRepeatLimit="marquee_forever"
+      android:marqueeRepeatLimit="marquee_forever"
+      android:textColor="@android:color/white"
 	  	android:layout_weight="8"/> 	
      
 	  <TextView
@@ -27,7 +28,8 @@
 	  	android:layout_gravity="center_vertical"
 	  	android:singleLine="true"
 	  	android:ellipsize="marquee"  
-      	android:marqueeRepeatLimit="marquee_forever"
+      android:marqueeRepeatLimit="marquee_forever"
+      android:textColor="@android:color/white"
 	  	android:layout_weight="1"/> 
 	
 </LinearLayout>  

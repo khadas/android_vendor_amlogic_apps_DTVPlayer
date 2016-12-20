@@ -16,6 +16,7 @@
 		android:textSize="22sp"
 		android:layout_marginLeft="40dp"
 		android:singleLine="true" 
+		android:textColor="@color/white"
 		android:ellipsize="marquee">  
 	</TextView>  
 
@@ -27,6 +28,7 @@
 		android:textSize="22sp"
 		android:layout_marginLeft="10dp"
 		android:singleLine="true" 
+		android:textColor="@color/white"
 		android:ellipsize="marquee">  
 	</TextView>  
    

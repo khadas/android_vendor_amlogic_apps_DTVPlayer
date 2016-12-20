@@ -10,6 +10,7 @@
 		android:layout_width="100px"
 		android:layout_height="40px" 
 		android:textSize="20sp"
+		android:textColor="@color/white"
 		android:layout_marginLeft="60px"
 	/>
 	<ImageView
@@ -25,12 +26,14 @@
 		android:layout_width="100px"
 		android:layout_height="40px" 
 		android:textSize="20sp"
+		android:textColor="@color/white"
 		android:layout_marginLeft="10px"/>
 		
 	<TextView
 		android:layout_width="60px"
 		android:layout_height="40px" 
 		android:textSize="20sp"
+		android:textColor="@color/white"
 		android:text="@string/mhz"/>
 		
 </LinearLayout>

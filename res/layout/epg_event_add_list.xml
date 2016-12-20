@@ -10,6 +10,7 @@
 		android:layout_width="260dp"
 		android:layout_height="40dp" 
 		android:textSize="20sp"
+		android:textColor="@color/white"
 		android:layout_marginLeft="60dp"
 	/>
 	<ImageView
@@ -27,6 +28,7 @@
 		android:layout_height="40dp" 
 		android:textSize="20sp"
 		android:singleLine="true"
+		android:textColor="@color/white"
 		android:visibility="invisible"
 		/>
 	<ImageView

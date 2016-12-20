@@ -15,6 +15,7 @@
         android:paddingLeft="40dp"
 		android:textSize="18sp"
         android:singleLine="true"
+        android:textColor="@color/white"
         android:layout_marginLeft="20px"/>
 	
       <TextView android:id="@+id/dimensiongs_content1" 
@@ -24,7 +25,8 @@
     	android:gravity="center_vertical"
     	android:textSize="18sp"
 	  	android:singleLine="true"
-	  	android:ellipsize="marquee"  
+	  	android:ellipsize="marquee"
+        android:textColor="@color/white"
         android:marqueeRepeatLimit="marquee_forever"
     	/>
 

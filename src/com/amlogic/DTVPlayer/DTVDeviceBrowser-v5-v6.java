@@ -639,7 +639,7 @@ public class DTVDeviceBrowser extends DTVActivity implements OnItemClickListener
 		deviceList.clear();
 		//Log.d(TAG,"sdk int: "+Build.VERSION.SDK_INT);
 		//Log.d(TAG,"getDevice sum="+deviceList.size());
-		if(Build.VERSION.SDK_INT==23)
+		if(Build.VERSION.SDK_INT==23 || Build.VERSION.SDK_INT==24 )
 		{
 			getPvrDevice_V6();
 			return;
@@ -679,7 +679,7 @@ public class DTVDeviceBrowser extends DTVActivity implements OnItemClickListener
 		deviceList.clear();
 		//Log.d(TAG,"browser sdk int: "+Build.VERSION.SDK_INT);
 		//Log.d(TAG,"browser getDevice sum="+deviceList.size());
-		if(Build.VERSION.SDK_INT==23)
+		if(Build.VERSION.SDK_INT==23 || Build.VERSION.SDK_INT==24 )
 		{
 			getPvrDevice_V6();
 			return;
@@ -826,6 +826,10 @@ public class DTVDeviceBrowser extends DTVActivity implements OnItemClickListener
 
 	private void readUsbDevice(String path,DeviceItem item,int mode) 	{ 	
 		
+			if ( Build.VERSION.SDK_INT == 24 ) {
+				readUsbDevice(path, item);
+			}
+
 			Runtime runtime = Runtime.getRuntime();  
             
 			String cmd = "df "+path ;

@@ -64,7 +64,8 @@
 			      android:layout_width="fill_parent"
 			      android:layout_height="26dp"
 			      android:layout_below="@+id/Text_curevent"
-			      android:textSize="20dp"  
+			      android:textSize="20dp"
+			      android:textColor="@color/white"
 			      android:paddingLeft="33dp"
 			      >
 			</TextView>
@@ -180,6 +181,7 @@
 				 android:text="@string/dtvplayer_str_time_null" 
 				 android:layout_weight="1"
 				 android:textSize="22dp"
+				 android:textColor="@color/white"
 				 android:layout_marginLeft="10dp">
 				</TextView>
 				<SeekBar android:id="@+id/SeekBar02"
@@ -195,6 +197,7 @@
 				 android:layout_gravity="center_vertical" 
 				 android:layout_weight="1" 
 				 android:textSize="22dp"
+				 android:textColor="@color/white"
 				 android:layout_marginRight="15dp" 
 				 android:layout_marginLeft="10dp">
 				 </TextView>
@@ -298,6 +301,7 @@
 		    android:layout_width="wrap_content" 
 		    android:layout_height="wrap_content" 
 		    android:text="@string/dtvplayer_loading"
+		    android:textColor="@color/white"
 		    android:layout_below="@+id/ProgressBarLoad"
 	    />
 	</RelativeLayout>

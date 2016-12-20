@@ -38,7 +38,8 @@
 				android:layout_height="fill_parent"
 				android:gravity="center">       
 
-				<com.amlogic.widget.RotateableTextView
+				<com.amlogic.widget.RotateableTextView
+
 					android:id="@+id/Text_button_info"
 					android:layout_width="300px"   
 					android:layout_height="300px" 
@@ -47,7 +48,8 @@
 					android:gravity="center_vertical"
 					android:paddingBottom="70px"
 					android:textColor="@color/yellow">
-				</com.amlogic.widget.RotateableTextView>
+				</com.amlogic.widget.RotateableTextView
+>
 			</LinearLayout>
 
 			<LinearLayout 
@@ -124,6 +126,7 @@
 		      android:paddingLeft="30dp"
 		      android:singleLine="true"
 		      android:layout_weight="1"
+		      android:textColor="@color/white"
 		      >
 			</TextView>
 
@@ -135,6 +138,7 @@
 		      android:textSize="26sp"
 		      android:paddingLeft="700dp"
 		      android:layout_weight="1"
+		      android:textColor="@color/white"
 		      >
 			</TextView>
 
@@ -147,6 +151,7 @@
 		      android:paddingLeft="30dp"
 		      android:singleLine="true"
 		      android:layout_weight="1"
+		      android:textColor="@color/white"
 		      >
 			</TextView>
 
@@ -159,6 +164,7 @@
 		      android:paddingLeft="700dp"
 		      android:singleLine="true"
 		      android:layout_weight="1"
+		      android:textColor="@color/white"
 		      >
 			</TextView>
 
@@ -171,6 +177,7 @@
 		      android:paddingLeft="30dp"
 		      android:singleLine="true"
 		      android:layout_weight="1"
+		      android:textColor="@color/white"
 		      >
 			</TextView>
 
@@ -183,6 +190,7 @@
 		      android:paddingLeft="700dp"
 		      android:singleLine="true"
 		      android:layout_weight="1"
+		      android:textColor="@color/white"
 		      >
 			</TextView>
 		<!--/LinearLayout-->
@@ -230,6 +238,7 @@
 				      android:paddingLeft="30dp"
 				      android:singleLine="true" 
 				      android:layout_weight="1"
+				      android:textColor="@color/white"
 				      >
 				</TextView>
 				<TextView 
@@ -239,6 +248,7 @@
 				      android:textSize="20sp"  
 				      android:paddingLeft="33dp"
 				      android:singleLine="true" 
+				      android:textColor="@color/white"
 				      android:layout_weight="1"
 				      >
 				</TextView>
@@ -322,6 +332,7 @@
 					android:padding="7dp"
 					android:shadowColor="@android:color/white"
 					android:gravity="center"
+					android:textColor="@color/white"
 					>
 				</TextView>
 			</LinearLayout>
@@ -372,6 +383,7 @@
 			      android:layout_below="@+id/Text_curevent"
 			      android:textSize="26sp"
 			      android:paddingLeft="35dp"
+			      android:textColor="@color/white"
 			      >
 			</TextView>
 			<TextView 
@@ -382,6 +394,7 @@
 			      android:layout_below="@+id/Text_title_info"
 			      android:textSize="26sp"
 			      android:paddingLeft="35dp"
+			      android:textColor="@color/white"
 			      >
 			</TextView>			
 		</RelativeLayout>
@@ -463,6 +476,7 @@
 		android:layout_alignParentRight="true"
 		android:layout_marginRight="50px"
 		android:gravity="center"
+		android:textColor="@color/white"
 		android:visibility="invisible">
 
 		<ImageView android:layout_width="48px" 
@@ -482,11 +496,13 @@
 		      android:paddingLeft="10px"
 		      android:textSize="28px" 
 		      android:gravity="center"
+		      android:textColor="@color/white"
 		      android:layout_toRightOf="@+id/ImageView_recordingIcon"
 		      >
 		</TextView>
 	</RelativeLayout>
-					
+		
+			
 	<!--loading icon-->
 	<RelativeLayout
 		android:orientation="horizontal"
@@ -506,8 +522,10 @@
 			android:layout_width="wrap_content" 
 			android:layout_height="wrap_content" 
 			android:text="@string/dtvplayer_loading"
+			android:textColor="@color/white"
 			android:layout_below="@+id/ProgressBarLoad"
-		/>	    
+		/>
+	    
 	</RelativeLayout>
 
 	<RelativeLayout 
@@ -521,6 +539,7 @@
 			android:layout_width="fill_parent"
 			android:layout_height="fill_parent"
 			android:gravity="center"
+			android:textColor="@color/white"
 			android:textSize="24sp">
 		</TextView>
 	</RelativeLayout>   	

@@ -19,6 +19,7 @@
 		android:layout_width="130px"
 		android:layout_height="42px" 
 		android:textSize="20sp"
+		android:textColor="@color/white"
 		android:layout_marginLeft="20px"
 		android:singleLine="true" 
 		android:ellipsize="marquee">  
@@ -30,6 +31,7 @@
 		android:layout_width="380px"
 		android:layout_height="42px" 
 		android:textSize="20sp"
+		android:textColor="@color/white"
 		android:layout_marginLeft="10px"
 		android:singleLine="true" 
 		android:ellipsize="marquee">  

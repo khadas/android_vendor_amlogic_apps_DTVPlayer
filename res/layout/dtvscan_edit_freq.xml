@@ -11,6 +11,7 @@
 			<TextView 
 				android:layout_width="2px" 
 				android:gravity="right"
+				android:textColor="@color/white"
 				android:layout_gravity="center"
 				android:layout_height="wrap_content" 
 				> 
@@ -19,12 +20,14 @@
 			<EditText android:id="@+id/dvbscan_edit_freq"
 				android:layout_width="fill_parent"
 				android:layout_height="wrap_content"
+				android:textColor="@color/white"
 				>
 			</EditText>
 
 			<TextView 
 				android:layout_width="2px" 
 				android:gravity="right"
+				android:textColor="@color/white"
 				android:layout_gravity="center"
 				android:layout_height="wrap_content" 
 				>

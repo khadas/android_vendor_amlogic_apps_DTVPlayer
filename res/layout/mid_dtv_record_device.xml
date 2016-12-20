@@ -18,6 +18,7 @@
             android:layout_gravity="center"
             android:text="@string/title_record_device"
             android:layout_marginLeft = "80dp"
+            android:textColor="@color/white"
             android:textSize="40sp"/>
 	</LinearLayout>	
 
@@ -58,6 +59,7 @@
 	            android:gravity="center"
 	            android:layout_marginLeft = "80dp"
 	            android:layout_marginRight = "80dp"
+	            android:textColor="@color/white"
 	            android:textSize="36sp"/>
 			<TextView android:id="@+id/type"
 				android:layout_weight="1"
@@ -66,6 +68,7 @@
 	            android:gravity="center|left"
 	            android:layout_marginLeft = "80dp"
 	            android:layout_marginRight = "80dp"
+	            android:textColor="@color/white"
 	            android:textSize="36sp"/>
 	    </LinearLayout>  
 	    <LinearLayout
@@ -81,6 +84,7 @@
 	            android:layout_marginLeft = "10dp"
 	            android:layout_marginRight = "80dp"
 	            android:textSize="36sp"
+	            android:textColor="@color/white"
 	            android:text="@string/volume_total"/>
 			<TextView android:id="@+id/total"
 				android:layout_weight="1"
@@ -89,6 +93,7 @@
 	            android:gravity="center|left"
 	            android:layout_marginLeft = "80dp"
 	            android:layout_marginRight = "80dp"
+	            android:textColor="@color/white"
 	            android:textSize="36sp"/>
         </LinearLayout>  
 	    <LinearLayout
@@ -104,6 +109,7 @@
 	            android:layout_marginLeft = "10dp"
 	            android:layout_marginRight = "80dp"
 	            android:textSize="36sp"
+	            android:textColor="@color/white"
 	            android:text="@string/volume_available"/>
 			<TextView android:id="@+id/space"
 				android:layout_weight="1"
@@ -112,6 +118,7 @@
 	            android:gravity="center|left"
 	            android:layout_marginLeft = "80dp"
 	            android:layout_marginRight = "80dp"
+	            android:textColor="@color/white"
 	            android:textSize="36sp"/>
         </LinearLayout>  
 	 
@@ -142,7 +149,7 @@
 			android:layout_height="wrap_content"
 		    android:layout_gravity="center"
 			android:text="@string/exit"
-			android:textColor="#FFFFFFFF"
+			android:textColor="@color/white"
 			android:textSize="20sp"
 			android:layout_marginRight="30dp"
 			/>

@@ -21,7 +21,7 @@
 		android:layout_height="34dp"
 		android:layout_gravity="center_horizontal"
 		android:text="@string/enter_password"
-		android:textColor="#FFFFFFFF"
+		android:textColor="@color/white"
 		android:gravity="center"
 		android:textSize="24sp" 
 		android:layout_marginTop="20dp"
@@ -51,6 +51,7 @@
 				android:layout_marginLeft = "30px"
 				android:layout_gravity="center_vertical"
 				android:singleLine="true"
+				android:textColor="@color/white"
 				android:text="@string/subtitle_switch"/>
 
 			 <CheckBox
@@ -73,6 +74,7 @@
 				android:layout_marginLeft = "30px"
 				android:layout_gravity="center_vertical"
 				android:singleLine="true"
+				android:textColor="@color/white"
 				android:text="@string/dtvplayer_subtitle_language_set"/>
 
 			<Button

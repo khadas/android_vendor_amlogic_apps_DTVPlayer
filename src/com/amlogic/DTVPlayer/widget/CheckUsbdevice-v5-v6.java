@@ -96,7 +96,7 @@ public class CheckUsbdevice
 	public String checkPvrFilePath(String file_path){
 		String path=null;
 		//Log.d(TAG, "file_path:"+file_path);
-		if(Build.VERSION.SDK_INT==23)
+		if(Build.VERSION.SDK_INT==23 || Build.VERSION.SDK_INT == 24)
 		{
 			return checkPvrFilePath_6v(file_path);
 		}
@@ -139,6 +139,13 @@ public class CheckUsbdevice
 	}
 
 	public String getDevice() {
+
+		if(Build.VERSION.SDK_INT==23 || Build.VERSION.SDK_INT == 24)
+		{
+			return getStoragePath();
+		}
+		
+
 		File[] files = new File(StorageUtils.externalDirBase).listFiles();
 		if (files != null) {
 			for (File file : files) {
@@ -154,15 +161,21 @@ public class CheckUsbdevice
 								//if((item!= null)){
 									item.Path = myfile.getPath();
 									item.VolumeName = item.VolumeName+" ["+myfile.getName()+"]";
-									Log.d("*******","device path: "+item.Path+" device format: "+item.format+" name: "+item.VolumeName);
+									Log.d(TAG,"device path: "+item.Path+" device format: "+item.format+" name: "+item.VolumeName);
 									return item.Path;
 									
 								//}
+							} else {
+								Log.d(TAG,"file can not read");
 							}
 						/*}
 					}*/
+				} else {
+					Log.d(TAG,"file not on extdir");
 				}
 			}	
+		} else {
+			Log.d(TAG,"file list null");
 		}
 
 		if(sdcard_deal(StorageUtils.getSdCardPath()))
@@ -264,7 +277,7 @@ public class CheckUsbdevice
 
 	public boolean findSdcardString(String path){ 	
 		 Runtime runtime = Runtime.getRuntime();  
-        if(Build.VERSION.SDK_INT==23)
+        if(Build.VERSION.SDK_INT==23 || Build.VERSION.SDK_INT == 24)
         {
         	Log.d(TAG,"findSdcardString_v6 path"+path);
             return findSdcardString_v6(path);	
@@ -341,6 +354,41 @@ public class CheckUsbdevice
 		}
 	}
 
+
+	public String getStoragePath() {  
+			  String tpath=null;
+				//external storage for 6.0
+        Class<?> volumeInfoClazz = null;
+        Method getDescriptionComparator = null;
+        Method getBestVolumeDescription = null;
+        Method getVolumes = null;
+        Method isMountedReadable = null;
+        Method getType = null;
+        Method getPath = null;
+        List<?> volumes = null;
+        try {
+            volumeInfoClazz = Class.forName("android.os.storage.VolumeInfo");
+            getDescriptionComparator = volumeInfoClazz.getMethod("getDescriptionComparator");
+            getBestVolumeDescription = StorageManager.class.getMethod("getBestVolumeDescription", volumeInfoClazz);
+            getVolumes = StorageManager.class.getMethod("getVolumes");
+            isMountedReadable = volumeInfoClazz.getMethod("isMountedReadable");
+            getType = volumeInfoClazz.getMethod("getType");
+            getPath = volumeInfoClazz.getMethod("getPath");
+            volumes = (List<?>)getVolumes.invoke(mStorageManager);
+
+            for (Object vol : volumes) {
+                if (vol != null && (boolean)isMountedReadable.invoke(vol) && (int)getType.invoke(vol) == 0) {
+                    File path = (File)getPath.invoke(vol);
+                    Log.d(TAG, "getStoragePath getDevice() path.getName():" + path.getName() + ", path.getPath():" + path.getPath());
+                		return path.getPath();
+                }
+            }
+        }catch (Exception ex) {
+            ex.printStackTrace();
+        }
+        return null;
+	}  
+
 	public List<String> getSatellitesDBFileList_6v()
 	{
 		//external storage for 6.0
@@ -371,19 +419,23 @@ public class CheckUsbdevice
                     File path = (File)getPath.invoke(vol);
                     Log.d(TAG, "getDevice() path.getName():" + path.getName() + ", path.getPath():" + path.getPath());
                     {
-						File[] db_file_sds = new File(path.getName()).listFiles();
-						if(db_file_sds!=null){
-							for(File db_file_sd : db_file_sds){
-								if(db_file_sd.isDirectory()){
+											File[] db_file_sds = new File(path.getPath()).listFiles();
+											if(db_file_sds!=null){
+												for(File db_file_sd : db_file_sds){
+													if(db_file_sd.isDirectory()){
 
-								}else{
-									if((db_file_sd.getName().endsWith("xml"))&&(db_file_sd.getName().startsWith("satellites"))){
-										satellites_db_file_list.add(path.getName()+"/"+db_file_sd.getName());
-										Log.d("SDCard","DB satellites file name:"+db_file_sd.getName());
-										}
-									}
-								}
-						}
+													}else{
+														if((db_file_sd.getName().endsWith("xml"))&&(db_file_sd.getName().startsWith("satellites"))){
+															satellites_db_file_list.add(path.getPath()+"/"+db_file_sd.getName());
+																	Log.d("SDCard","DB satellites file name:"+db_file_sd.getName());
+															}
+															else
+															{
+																Log.d("SDCard","DB satellites file name:"+db_file_sd.getName()+" path.getPath()"+path.getPath());
+															}
+														}
+													}
+											}
                     }
                 }
             }
@@ -397,7 +449,7 @@ public class CheckUsbdevice
 	public List<String> getSatellitesDBFileList() {
 		String externalStorageState = Environment.getExternalStorageState();  
 
-		if(Build.VERSION.SDK_INT==23)
+		if(Build.VERSION.SDK_INT==23 || Build.VERSION.SDK_INT == 24)
 		{
 			return getSatellitesDBFileList_6v();
 		}
@@ -518,7 +570,7 @@ public class CheckUsbdevice
 	}
 	public List<File> getPvrFileList() {
 		String externalStorageState = Environment.getExternalStorageState();  
-		if(Build.VERSION.SDK_INT==23)
+		if(Build.VERSION.SDK_INT==23 || Build.VERSION.SDK_INT == 24)
 		{
 			//Log.d(TAG,"getPvrFileList--v6");
 			return getPvrFileList_6v();

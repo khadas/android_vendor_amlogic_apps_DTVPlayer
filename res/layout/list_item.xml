@@ -16,6 +16,7 @@
         android:layout_weight="2" 
         android:layout_centerVertical="true"
         android:gravity="left"
+        android:textColor="@color/white"
         android:paddingLeft="70dp"
         android:textSize="30px" />
 	
@@ -24,6 +25,7 @@
 			android:layout_height="wrap_content" 
 			android:layout_weight="1" 
 			android:gravity="center"
+      android:textColor="@color/white"
 			android:layout_centerVertical="true"
 			android:textSize="30px"
 			/>

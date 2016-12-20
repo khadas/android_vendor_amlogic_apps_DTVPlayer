@@ -21,7 +21,7 @@
 		android:layout_height="34dp"
 		android:layout_gravity="center_horizontal"
 		android:text="@string/enter_password"
-		android:textColor="#FFFFFFFF"
+		android:textColor="@color/white"
 		android:gravity="center"
 		android:textSize="24sp" 
 		android:layout_marginTop="20dp"
@@ -59,11 +59,13 @@
 				android:layout_height="40dp"
 				android:layout_gravity="center_vertical"
 				android:singleLine="true"
+				android:textColor="@color/white"
 				android:text="@string/channel_name"/>
 			<TextView android:id="@+id/text_channel_name"
 				android:layout_width="300dp"
 				android:layout_height="wrap_content"
 				android:singleLine="true"
+				android:textColor="@color/white"
 				android:textSize="20sp"
 				/>
 		</LinearLayout>
@@ -81,12 +83,14 @@
 				android:layout_height="40dp"
 				android:layout_gravity="center_vertical"
 				android:singleLine="true"
+				android:textColor="@color/white"
 				android:text="@string/event_name"/>
 
 			<TextView
 				android:singleLine="true"
 				android:id="@+id/text_event_name"
 				android:layout_width="300dp"
+				android:textColor="@color/white"
 				android:layout_height="wrap_content"
 				android:textSize="20sp"
 			></TextView>
@@ -105,11 +109,13 @@
 				android:layout_height="40dp"
 				android:layout_gravity="center_vertical"
 				android:singleLine="true"
+				android:textColor="@color/white"
 				android:text="@string/event_start_date"/>
 			<TextView android:id="@+id/text_event_start_date"
 				android:layout_width="300dp"
 				android:layout_height="wrap_content"
 				android:singleLine="true"
+				android:textColor="@color/white"
 				android:textSize="20sp"/>
 		</LinearLayout>
 	    
@@ -123,6 +129,7 @@
 				android:layout_width="290dp"
 				android:textSize="20sp"
 				android:layout_height="40dp"
+				android:textColor="@color/white"
 				android:layout_gravity="center_vertical"
 				android:singleLine="true"
 				android:text="@string/event_start_time"/>
@@ -130,6 +137,7 @@
 				android:layout_width="300dp"
 				android:layout_height="wrap_content"
 				android:singleLine="true"
+				android:textColor="@color/white"
 				android:textSize="20sp"/>
 		</LinearLayout>
 
@@ -145,11 +153,13 @@
 				android:layout_height="40dp"
 				android:layout_gravity="center_vertical"
 				android:singleLine="true"
+				android:textColor="@color/white"
 				android:text="@string/event_end_time"/>
 			<TextView android:id="@+id/text_event_end_time"
 				android:layout_width="300dp"
 				android:layout_height="wrap_content"
 				android:singleLine="true"
+				android:textColor="@color/white"
 				android:textSize="20sp"/>
 		</LinearLayout>
 		

@@ -33,6 +33,7 @@
 	            android:layout_height="fill_parent"
 	            android:layout_weight="6"
 	            android:gravity="center"
+	            android:textColor="@color/white"
 	            android:textSize="24sp" >
 	        </TextView>
 
@@ -110,6 +111,7 @@
 	                android:layout_weight="6"
 	                android:gravity="center"
 	                android:textSize="24sp"
+	                android:textColor="@color/white"
 	                android:singleLine="true">
 	            </TextView>
 	        </LinearLayout>
@@ -133,7 +135,7 @@
 	                android:layout_height="wrap_content"
 	                android:layout_gravity="center"
 	                android:text="@string/help_info_return"
-	                android:textColor="#FFFFFFFF"
+	                android:textColor="@color/white"
 	                android:textSize="20sp" />
 
 	            <ImageView
@@ -148,7 +150,7 @@
 	                android:layout_gravity="center"
 	                android:layout_marginRight="20dp"
 	                android:text="@string/goto_s"
-	                android:textColor="#FFFFFFFF"
+	                android:textColor="@color/white"
 	                android:textSize="20sp" />
 
 	            <ImageView
@@ -163,7 +165,7 @@
 	                android:layout_gravity="center"
 	                android:layout_marginRight="20dp"
 	                android:text="@string/epg_book"
-	                android:textColor="#FFFFFFFF"
+	                android:textColor="@color/white"
 	                android:textSize="20sp" />
 
 	             <ImageView
@@ -178,7 +180,7 @@
 	                android:layout_gravity="center"
 	                android:layout_marginRight="20dp"
 	                android:text="@string/find"
-	                android:textColor="#FFFFFFFF"
+	                android:textColor="@color/white"
 	                android:textSize="20sp" />  
 	        </LinearLayout>
 	    </LinearLayout>

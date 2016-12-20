@@ -29,7 +29,7 @@
 			android:layout_height="34dp"
 			android:layout_gravity="center_horizontal"
 			android:text="@string/enter_password"
-			android:textColor="#FFFFFFFF"
+			android:textColor="@color/white"
 			android:gravity="center"
 			android:textSize="24sp" 
 			android:layout_marginTop="20dp"
@@ -44,6 +44,7 @@
     		android:layout_height="wrap_content"
     		android:paddingLeft="50dp"
     		android:paddingRight="50dp"
+    		android:textColor="@color/white"
     		android:background="@drawable/single_dia_body"
     		android:layout_above="@+id/layout_tail" 
     		android:layout_below="@+id/layout_head" >
@@ -69,7 +70,8 @@
 				android:id="@+id/list_item"
 				android:layout_width="match_parent"
 				android:layout_height="wrap_content"
-				android:listSelector="#00000000">
+				android:listSelector="#00000000"
+				android:textColor="@color/white">
 			</com.amlogic.widget.FocusScrollListView>
 		</LinearLayout> 
 	</LinearLayout> 

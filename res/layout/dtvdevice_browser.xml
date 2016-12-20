@@ -17,6 +17,7 @@
             android:gravity="left"
             android:text="@string/pvr_storage_select"
             android:layout_marginLeft = "80px"
+            android:textColor="@color/white"
             android:textSize="24sp"/>
 	</LinearLayout>	
 
@@ -67,6 +68,7 @@
 				android:layout_height="fill_parent" 
 				android:gravity="center"
 				android:text="@string/selected_help"
+				android:textColor="@color/white"
 				android:textSize="16sp"/>
 	</LinearLayout>
 

@@ -21,7 +21,7 @@
 		android:layout_height="34dp"
 		android:layout_gravity="center_horizontal"
 		android:text="@string/enter_password"
-		android:textColor="#FFFFFFFF"
+		android:textColor="@color/white"
 		android:gravity="center"
 		android:textSize="24sp" 
 		android:layout_marginTop="20dp"
@@ -54,11 +54,13 @@
 			android:layout_height="wrap_content"
 			android:layout_gravity="center_vertical"
 			android:singleLine="true"
+			android:textColor="@color/white"
 			android:text="@string/item_no"/>
 		<TextView
 			android:id="@+id/item_no"
 			android:layout_width="80px"
 			android:textSize="20sp"
+			android:textColor="@color/white"
 			android:layout_height="wrap_content"
 			android:layout_gravity="center_vertical"
 			android:singleLine="true"/>	
@@ -77,11 +79,13 @@
 			android:layout_height="wrap_content"
 			android:layout_gravity="center_vertical"
 			android:singleLine="true"
+			android:textColor="@color/white"
 			android:text="@string/ts_frequency"/>
 		<EditText android:id="@+id/edittext_frequency"
 			android:layout_width="300px"
 			android:layout_height="wrap_content"
 			android:singleLine="true"
+			android:textColor="@color/white"
 			android:numeric="integer"/>
 	</LinearLayout>
 
@@ -96,6 +100,7 @@
 			android:layout_height="wrap_content"
 			android:layout_gravity="center_vertical"
 			android:singleLine="true"
+			android:textColor="@color/white"
 			android:text="@string/ts_polarity"/>
 
 		<Button
@@ -116,11 +121,13 @@
 			android:layout_height="wrap_content"
 			android:layout_gravity="center_vertical"
 			android:singleLine="true"
+			android:textColor="@color/white"
 			android:text="@string/ts_symbol"/>
 		<EditText android:id="@+id/edittext_symbol"
 			android:layout_width="300px"
 			android:layout_height="wrap_content"
 			android:singleLine="true"
+			android:textColor="@color/white"
 			android:numeric="integer"/>
 	</LinearLayout>
    </LinearLayout> 

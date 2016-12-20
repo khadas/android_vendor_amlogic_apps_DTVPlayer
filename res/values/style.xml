@@ -7,7 +7,17 @@
 		<item name="android:windowAnimationStyle">@+android:style/Animation.Translucent</item>
 		<item name="android:textColor">#FFFFFFFF</item>
 	</style>  
-	
+	<style name="theme_trans">
+		<item name="android:windowBackground">@color/black</item>  
+		<item name="android:windowNoTitle">true</item>  
+		<item name="android:windowAnimationStyle">@style/TitleBackgroundColor</item>
+		<item name="android:textColor">#FFFFFFFF</item>
+	</style>
+
+  <style name="TitleBackgroundColor">
+  	<item name="android:background">#00000000</item>
+  </style> 
+
 	<style name="Theme.CustomDialog" parent="android:style/Theme.Dialog">  
 		<item name="android:windowFrame">@null</item>	
 		<item name="android:windowIsFloating">true</item>	

@@ -43,7 +43,7 @@ android:background ="@drawable/bg"
 		android:layout_height="fill_parent"
 		android:gravity="center"
 		android:text="@string/epg_title"
-		android:textColor="#FFFFFFFF"
+		android:textColor="@color/white"
 		android:textSize="40sp"
 		android:layout_marginRight="30dp"
 		/>
@@ -107,7 +107,7 @@ android:background ="@drawable/bg"
 						    android:layout_width="wrap_content"
 						    android:layout_height="wrap_content"
 						    android:layout_centerInParent="true"
-						    android:textColor="#FFFFFFFF"
+						    android:textColor="@color/white"
 						    android:textSize="24sp" />
 
 					</RelativeLayout>
@@ -180,7 +180,7 @@ android:background ="@drawable/bg"
 						android:layout_height="wrap_content"
 						android:layout_centerInParent="true"
 						android:text="@string/epg_sunday"
-						android:textColor="#FFFFFFFF"
+						android:textColor="@color/white"
 						android:textSize="20sp"
 						/>
 					</RelativeLayout>
@@ -230,7 +230,7 @@ android:background ="@drawable/bg"
 						    android:layout_height="wrap_content"
 						    android:layout_centerInParent="true"
 						    android:text="@string/epg_tuesday"
-						    android:textColor="#FFFFFFFF"
+						    android:textColor="@color/white"
 						    android:textSize="20sp" />
 
 					</RelativeLayout>
@@ -254,7 +254,7 @@ android:background ="@drawable/bg"
 						android:layout_height="wrap_content"
 						android:layout_centerInParent="true"
 						android:text="@string/epg_wednesday"
-						android:textColor="#FFFFFFFF"
+						android:textColor="@color/white"
 						android:textSize="20sp"
 						/>
 					</RelativeLayout>
@@ -278,7 +278,7 @@ android:background ="@drawable/bg"
 						android:layout_height="wrap_content"
 						android:layout_centerInParent="true"
 						android:text="@string/epg_thursday"
-						android:textColor="#FFFFFFFF"
+						android:textColor="@color/white"
 						android:textSize="20sp"
 						/>
 					</RelativeLayout>
@@ -302,7 +302,7 @@ android:background ="@drawable/bg"
 						android:layout_height="wrap_content"
 						android:layout_centerInParent="true"
 						android:text="@string/epg_friday"
-						android:textColor="#FFFFFFFF"
+						android:textColor="@color/white"
 						android:textSize="20sp"
 						/>
 					</RelativeLayout>
@@ -326,7 +326,7 @@ android:background ="@drawable/bg"
 					android:layout_height="wrap_content"
 					android:layout_centerInParent="true"
 					android:text="@string/epg_saturday"
-					android:textColor="#FFFFFFFF"
+					android:textColor="@color/white"
 					android:textSize="20sp"
 					
 					/>
@@ -384,7 +384,7 @@ android:background ="@drawable/bg"
 			android:layout_height="wrap_content"
 		    android:layout_gravity="center"
 			android:text="@string/epg_info"
-			android:textColor="#FFFFFFFF"
+			android:textColor="@color/white"
 			android:textSize="20sp"
 			android:layout_marginRight="30dp"
 			/>
@@ -409,7 +409,7 @@ android:background ="@drawable/bg"
 			android:layout_height="wrap_content"
 			android:layout_gravity="center"
 			android:text="@string/exit"
-			android:textColor="#FFFFFFFF"
+			android:textColor="@color/white"
 			android:textSize="20sp"
 			android:layout_marginRight="30dp"
 			/>
@@ -435,7 +435,7 @@ android:background ="@drawable/bg"
 			android:layout_height="wrap_content"
 		    android:layout_gravity="center"
 			android:text="@string/epg_booklist"
-			android:textColor="#FFFFFFFF"
+			android:textColor="@color/white"
 			android:textSize="20sp"
 			android:layout_marginRight="30dp"
 			/>
@@ -485,7 +485,7 @@ android:background ="@drawable/bg"
 			android:layout_height="wrap_content"
 		    android:layout_gravity="center"
 			android:text="@string/epg_page_down"
-			android:textColor="#FFFFFFFF"
+			android:textColor="@color/white"
 			android:textSize="20sp"
 			android:layout_marginRight="30dp"
 			/>

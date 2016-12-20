@@ -292,8 +292,13 @@ public class DTVProgramEdit extends DTVActivity{
 		if(mDTVSettings == null)
 			mDTVSettings = new DTVSettings(this);
 		DTVChannelList_UI_Init();
-		playProgram(db_id);
-		myAdapter.notifyDataSetChanged();
+		new Handler().postDelayed(new Runnable() {
+	   @Override
+	   public void run() {
+	   			playProgram(db_id);
+					myAdapter.notifyDataSetChanged();
+	    }
+	  }, 1500);
 	}
 
 	public void onVideoViewFixStart(){
@@ -1706,10 +1711,12 @@ public class DTVProgramEdit extends DTVActivity{
 			if(db_id == mTVProgramList[position].getID()){
 				//convertView.setBackgroundColor(Color.RED);
 				holder.text.setTextColor(Color.YELLOW);
+				holder.prono.setTextColor(Color.YELLOW);
 			}
 			else{
 				//convertView.setBackgroundColor(Color.TRANSPARENT);
 				holder.text.setTextColor(Color.WHITE);
+				holder.prono.setTextColor(Color.WHITE);
 			}
 
 			if(mTVProgramList[position].getLockFlag()){

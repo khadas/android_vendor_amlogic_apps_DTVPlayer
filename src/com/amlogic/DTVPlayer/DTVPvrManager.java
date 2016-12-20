@@ -278,6 +278,85 @@ public class DTVPvrManager extends DTVActivity{
 			filenameList.remove(pos);
 	}
 
+ private static class myListAdapter extends BaseAdapter {
+		private LayoutInflater mInflater;
+		private Context cont;
+		private ArrayList<HashMap<String, Object>> listItems;
+		private int selectItem;
+
+		static class ViewHolder {
+			TextView ItemText;
+			TextView ItemTitle;
+		}
+
+		public myListAdapter(Context context, ArrayList<HashMap<String, Object>> list) {
+			super();
+			cont = context;
+			listItems = list;
+			mInflater=LayoutInflater.from(context);
+			//Log.d(TAG,"myListAdapter init");
+		}
+
+		public int getCount() {
+			//Log.d(TAG,"myListAdapter getCount");
+			if(listItems==null)
+				return 0;
+			else
+				return listItems.size();
+		}
+
+		public Object getItem(int position) {
+			//Log.d(TAG,"myListAdapter getItem");
+			return position;
+		}
+
+		public long getItemId(int position) {
+			//Log.d(TAG,"myListAdapter getItemId");
+			return position;
+		}
+
+		public void setSelectItem(int position)
+		{
+			//Log.d(TAG,"myListAdapter setSelectItem");
+			this.selectItem = position;
+		}
+
+		public int getSelectItem()
+		{
+			return this.selectItem;
+		}
+
+
+		public View getView(int position, View convertView, ViewGroup parent) {
+			ViewHolder holder;
+			//Log.d(TAG,"myListAdapter getView");
+			if (convertView == null) {
+
+				convertView = mInflater.inflate(R.layout.simple_list_item, null);
+
+				holder = new ViewHolder();
+				holder.ItemText = (TextView) convertView.findViewById(R.id.ItemText);
+				holder.ItemTitle = (TextView) convertView.findViewById(R.id.ItemTitle);
+				convertView.setTag(holder);
+			}else {
+				// Get the ViewHolder back to get fast access to the TextView
+				// and the ImageView.
+				holder = (ViewHolder) convertView.getTag();
+			}
+
+			// Bind the data efficiently with the holder.
+			if(listItems!=null)
+			{
+				//Log.d(TAG,"myListAdapter setText setTextColor");
+				holder.ItemText.setText((String)listItems.get(position).get("ItemText"));
+				holder.ItemText.setTextColor(Color.WHITE);
+				holder.ItemTitle.setText((String)listItems.get(position).get("ItemTitle"));
+				holder.ItemTitle.setTextColor(Color.WHITE);
+			}
+
+			return convertView;
+		}
+	}
 	private void getPvrFileInfo(int pos){
 		String file_name = getServiceInfoByPostion(pos);
 		if(file_name!=null){
@@ -309,14 +388,9 @@ public class DTVPvrManager extends DTVActivity{
 				map2.put("ItemTitle", getString(R.string.recmanager_filename)+":");
 				map2.put("ItemText", URLDecoder.decode(file.getName()));   
 				listItem.add(map2); 
-						       
-		        SimpleAdapter listItemAdapter = new SimpleAdapter(DTVPvrManager.this,listItem,
-					R.layout.simple_list_item,
-					new String[] {"ItemTitle", "ItemText"},
-					new int[] {R.id.ItemTitle,R.id.ItemText}   
-		        );   
-
-		        detail.setAdapter(listItemAdapter);   	
+				//SimpleAdapter
+		    myListAdapter listItemAdapter = new myListAdapter(DTVPvrManager.this,listItem);
+		    detail.setAdapter(listItemAdapter);   	
 			} else {
 				
 			}	

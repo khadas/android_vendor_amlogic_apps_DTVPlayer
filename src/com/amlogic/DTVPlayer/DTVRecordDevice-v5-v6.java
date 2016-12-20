@@ -630,7 +630,7 @@ public class DTVRecordDevice extends DTVActivity {
 					    //if((item!= null)&&(item.format!=null)){
 						item.Path = path.getPath();
 						readUsbDevice(item.Path,item,0);
-						//Log.d(TAG,"item.total: "+item.total+"item.spare: "+ item.spare);
+						Log.d(TAG,"item.total: "+item.total+"item.spare: "+ item.spare);
 						if(item.total==null||item.spare==null||item.total.equals("0.0K") && item.spare.equals("0.0K")) {
 							Log.d(TAG,"external storage device is invalid");
 						} else {
@@ -799,7 +799,7 @@ public class DTVRecordDevice extends DTVActivity {
 		Log.d(TAG,"--StorageUtils device path: "+StorageUtils.externalDirBase);
 		Log.d(TAG,"sdk int: "+Build.VERSION.SDK_INT);
 		Log.d(TAG,"getDevice sum="+deviceList.size());
-		if(Build.VERSION.SDK_INT==23)
+		if(Build.VERSION.SDK_INT==23 || Build.VERSION.SDK_INT==24)
 		{
 			getPvrDevice_V6();
 			return;
@@ -855,7 +855,7 @@ public class DTVRecordDevice extends DTVActivity {
 
 	private void getDeviceOnBack() {
 		deviceList.clear();
-		if(Build.VERSION.SDK_INT==23)
+		if(Build.VERSION.SDK_INT==23 || Build.VERSION.SDK_INT == 24)
 		{
 			getPvrDevice_V6();
 			return;
@@ -963,7 +963,7 @@ public class DTVRecordDevice extends DTVActivity {
 			long blockCount = sf.getBlockCount();
 			long availCount = sf.getAvailableBlocks();
 			item.spare = Long.toString(availCount*blockSize/1024/1024)+"MB";
-			item.total =  Long.toString(blockSize*blockCount/1024/10240)+"MB";
+			item.total =  Long.toString(blockSize*blockCount/1024/1024)+"MB";
 			
 			Log.d("", "block:"+ blockSize+",block:"+ blockCount+",total"+blockSize*blockCount/1024/1024+"MB");
 			Log.d("", "availid"+ availCount+",reserved:"+ availCount*blockSize/1024/1024+"MB"); 	
@@ -1012,7 +1012,10 @@ public class DTVRecordDevice extends DTVActivity {
 
 
 	private void readUsbDevice(String path,DeviceItem item,int mode) 	{ 	
-		
+			if ( Build.VERSION.SDK_INT == 24 ) {
+				readUsbDevice(path, item);
+				return;
+			}
 			Runtime runtime = Runtime.getRuntime();  
             
 			String cmd = "df "+path ;

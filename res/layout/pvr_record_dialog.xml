@@ -16,6 +16,7 @@
 			    android:layout_height="wrap_content" 
 			    android:textSize="30px"
 			    android:layout_below="@+id/ProgressBarLoad"
+			    android:textColor="@android:color/white"
 		   />
         
 </LinearLayout>

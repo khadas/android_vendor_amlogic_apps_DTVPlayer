@@ -66,6 +66,7 @@
 								android:textSize="20sp"
 								android:layout_height="wrap_content"
 								android:gravity="center"
+								android:textColor="@color/white"
 								android:layout_gravity="center_vertical"
 								android:singleLine="true"
 								android:layout_weight="4"/>
@@ -79,6 +80,7 @@
 							  	android:gravity="center"
 							  	android:layout_gravity="center_vertical"
 							  	android:singleLine="true"
+							  	android:textColor="@color/white"
 							  	android:layout_weight="8"/>  
 							<TextView
 							  	android:id="@+id/position"
@@ -90,6 +92,7 @@
 							  	android:gravity="center"
 							  	android:layout_gravity="center_vertical"
 							  	android:singleLine="true"
+							  	android:textColor="@color/white"
 							  	android:layout_weight="8"/>  		
 
 							  <TextView
@@ -102,6 +105,7 @@
 							  	android:layout_gravity="center_vertical"
 							  	android:singleLine="true"
 							  	android:ellipsize="marquee"  
+							  	android:textColor="@color/white"
 						     		 android:marqueeRepeatLimit="marquee_forever"
 							  	android:layout_weight="20"/> 	
 							  	
@@ -132,6 +136,7 @@
 									  	android:gravity="center"
 									  	android:layout_gravity="center_vertical"
 									  	android:singleLine="true"
+									  	android:textColor="@color/white"
 									  	android:layout_weight="8"/>
 
 								        <TextView
@@ -143,6 +148,7 @@
 									  	android:gravity="center"
 									  	android:layout_gravity="center_vertical"
 									  	android:singleLine="true"
+									  	android:textColor="@color/white"
 									  	android:layout_weight="16"/>
 									 <TextView
 									  	android:id="@+id/polarity"
@@ -154,6 +160,7 @@
 									  	android:gravity="center"
 									  	android:layout_gravity="center_vertical"
 									  	android:singleLine="true"
+									  	android:textColor="@color/white"
 									  	android:layout_weight="10"/>  
 									  <TextView
 									  	android:id="@+id/symbol"
@@ -164,6 +171,7 @@
 									  	android:gravity="center"
 									  	android:layout_gravity="center_vertical"
 									  	android:singleLine="true"
+									  	android:textColor="@color/white"
 									  	android:layout_weight="16"/> 
 									  
 								</LinearLayout> 
@@ -192,6 +200,7 @@
 									  	android:gravity="center"
 									  	android:layout_gravity="center"
 									  	android:visibility="gone"
+									  	android:textColor="@color/white"
 									  	android:background="#FF171717"
 									  	/> 		
 						    </RelativeLayout>    	
@@ -214,6 +223,7 @@
 								android:textSize="22sp"
 								android:gravity="center"
 								 android:singleLine="true"
+								 android:textColor="@color/white"
 	  							android:layout_gravity="center_vertical"/>
 	  					 <ListView
 						     	android:id="@+id/sat_lnb_list"
@@ -252,7 +262,7 @@
 			android:layout_height="wrap_content"
 		    android:layout_gravity="center"
 			android:text="@string/dish_setup_conf_button_des1_info"
-			android:textColor="#FFFFFFFF"
+			android:textColor="@color/white"
 			android:textSize="20sp"
 			android:layout_marginRight="30dp"
 			/>
@@ -276,7 +286,7 @@
 			android:layout_height="wrap_content"
 		    android:layout_gravity="center"
 			android:text="@string/dish_setup_conf_button_des5_info"
-			android:textColor="#FFFFFFFF"
+			android:textColor="@color/white"
 			android:textSize="20sp"
 			android:layout_marginRight="20dp"
 			/>
@@ -300,7 +310,7 @@
 			android:layout_height="wrap_content"
 		    android:layout_gravity="center"
 			android:text="@string/dish_setup_conf_button_des2_info"
-			android:textColor="#FFFFFFFF"
+			android:textColor="@color/white"
 			android:textSize="20sp"
 			android:layout_marginRight="20dp"
 			/>
@@ -324,7 +334,7 @@
 			android:layout_height="wrap_content"
 		    android:layout_gravity="center"
 			android:text="@string/dish_setup_conf_button_des3_info"
-			android:textColor="#FFFFFFFF"
+			android:textColor="@color/white"
 			android:textSize="20sp"
 			android:layout_marginRight="20dp"
 			/>
@@ -348,7 +358,7 @@
 			android:layout_height="wrap_content"
 		    android:layout_gravity="center"
 			android:text="@string/dish_setup_conf_button_des4_info"
-			android:textColor="#FFFFFFFF"
+			android:textColor="@color/white"
 			android:textSize="20sp"
 			android:layout_marginRight="20dp"
 			/>
@@ -373,7 +383,7 @@
 			android:layout_height="wrap_content"
 		    android:layout_gravity="center"
 			android:text="@string/dish_setup_conf_button_des6_info"
-			android:textColor="#FFFFFFFF"
+			android:textColor="@color/white"
 			android:textSize="20sp"
 			android:layout_marginRight="20dp"
 			/>
@@ -398,7 +408,7 @@
 			android:layout_height="wrap_content"
 		    android:layout_gravity="center"
 			android:text="@string/dish_setup_conf_button_des7_info"
-			android:textColor="#FFFFFFFF"
+			android:textColor="@color/white"
 			android:textSize="20sp"
 			android:layout_marginRight="20dp"
 			/>
@@ -423,7 +433,7 @@
 			android:layout_height="wrap_content"
 		    android:layout_gravity="center"
 			android:text="@string/dish_setup_conf_button_des8_info"
-			android:textColor="#FFFFFFFF"
+			android:textColor="@color/white"
 			android:textSize="20sp"
 			android:layout_marginRight="20dp"
 			/>

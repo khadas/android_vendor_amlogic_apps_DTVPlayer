@@ -17,6 +17,7 @@
 	  	android:layout_gravity="center_vertical"
 	  	android:singleLine="true"
 	  	android:ellipsize="marquee"  
+	  	android:textColor="@color/white"
       		android:marqueeRepeatLimit="marquee_forever"
 	  	android:layout_weight="1"/>
 	 <TextView
@@ -28,11 +29,13 @@
 	  	android:gravity="center"
 	  	android:layout_gravity="center_vertical"
 	  	android:singleLine="true"
+	  	android:textColor="@color/white"
 	  	android:layout_weight="1"/>  
 	  <TextView
 	  	android:id="@+id/pvr_time"
 	  	android:layout_width="20px"
 	  	android:textSize="20sp"
+	  	android:textColor="@color/white"
 	  	android:layout_height="wrap_content"
 	  	android:gravity="center"
 	  	android:layout_gravity="center_vertical"
@@ -42,6 +45,7 @@
 	  	android:id="@+id/filename"
 	  	android:layout_width="20px"
 	  	android:textSize="20sp"
+	  	android:textColor="@color/white"
 	  	android:layout_height="wrap_content"
 	  	android:gravity="center"
 	  	android:layout_gravity="center_vertical"

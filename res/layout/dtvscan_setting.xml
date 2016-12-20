@@ -33,6 +33,7 @@
 						android:layout_width="fill_parent"
 						android:layout_height="fill_parent"
 						android:gravity="center"
+						android:textColor="@color/white"
 						android:textSize="24sp"
 						>
 					</TextView>
@@ -100,7 +101,7 @@
 			        android:layout_height="wrap_content"
 			        android:layout_gravity="center"
 			        android:text="@string/help_info_move"
-			        android:textColor="#FFFFFFFF"
+			        android:textColor="@color/white"
 			        android:textSize="20sp" 
 			        android:layout_marginRight="30px"
 			        />
@@ -114,7 +115,7 @@
 			        android:layout_height="wrap_content"
 			        android:layout_gravity="center"
 			        android:text="@string/help_info_select"
-			        android:textColor="#FFFFFFFF"
+			        android:textColor="@color/white"
 			        android:textSize="20sp"
 			        android:layout_marginRight="30px"
 			        />
@@ -128,7 +129,7 @@
 			        android:layout_height="wrap_content"
 			        android:layout_gravity="center"
 			        android:text="@string/help_info_return"
-			        android:textColor="#FFFFFFFF"
+			        android:textColor="@color/white"
 			        android:textSize="20sp" />
 			</LinearLayout>
 		</LinearLayout>	

@@ -6,6 +6,8 @@
 	<color name="event_background">#80000000</color>
 	<color name="program_background">#00FFFFFF</color>
 	<color name="yellow">#FFFF00</color>
+	<color name="white">#FFFFFFFF</color>
+	<color name="black">#FF000000</color>
 	<color name="red">#FFFF00</color>
     <drawable name="blue">#0000FF</drawable>
     <drawable name="black">#000000</drawable>

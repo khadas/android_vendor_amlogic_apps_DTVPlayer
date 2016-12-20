@@ -58,6 +58,7 @@ public class DTVPvrPlayer extends DTVActivity{
 		MENUS[menu.SHORTCUT_PICTURE_MODE.ordinal()] = R.string.picture_mode;
 		MENUS[menu.EXIT_PLAYER.ordinal()] = R.string.exit_player;
 		setContentView(R.layout.dtvtimeshiftplayer);
+		openVideo();
 		Bundle bundle = this.getIntent().getExtras();
 		if(bundle!=null){
 	    	record_id = bundle.getInt("booking_id");
@@ -68,8 +69,8 @@ public class DTVPvrPlayer extends DTVActivity{
 
 	public void onConnected(){
 		Log.d(TAG, "connected");
-		super.onConnected();
-		openVideo();
+		 super.onConnected();
+		//openVideo();
 		setBlackoutPolicy(1);
 		pvrHandler.postDelayed(pvrTimer, 500);
 		startPlayback(file_name);
@@ -84,7 +85,7 @@ public class DTVPvrPlayer extends DTVActivity{
 	@Override
 	protected void onStart(){
 		Log.d(TAG, "onStart");
-		super.onStart();
+		 super.onStart();
 
 		mount_receiver = new MountEventReceiver();
 		IntentFilter filter = new IntentFilter();

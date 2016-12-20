@@ -14,4 +14,5 @@
     android:gravity="center"
     android:paddingLeft="6px"
     android:paddingRight="6px"
+    android:textColor="@color/white"
     android:textAppearance="?android:attr/textAppearanceLarge" />

@@ -20,7 +20,7 @@
 		        android:layout_height="34dp"
 		        android:layout_gravity="center_horizontal"
 		        android:text="@string/enter_password"
-		        android:textColor="#FFFFFFFF"
+		        android:textColor="@color/white"
 		 		android:gravity="center"
 		        android:textSize="24dp" 
 		        android:layout_marginTop="20dp"/>	
@@ -41,7 +41,7 @@
 			        android:layout_width="wrap_content"
 			        android:layout_height="wrap_content"
 			        android:layout_gravity="center_horizontal"
-			        android:textColor="#FFFFFFFF"
+			        android:textColor="@color/white"
 			 		android:gravity="center" 
 			 		android:textSize="10dp" 
 			        />	
@@ -114,6 +114,7 @@
 					 android:background="@drawable/button_pin_null"
 					 android:layout_weight="1"
 					 android:cursorVisible="false"
+					 android:textColor="@color/white"
 					 android:focusableInTouchMode="true"
 					 android:inputType="number"
 					 />
@@ -171,7 +172,7 @@
 			    android:layout_height="wrap_content"
 			    android:layout_gravity="center"
 			    android:text="@string/confirm"
-			    android:textColor="#FFFFFFFF"
+			    android:textColor="@color/white"
 			    android:textSize="24dp"
 			    android:layout_marginRight="30dp"
 			    />
@@ -186,7 +187,7 @@
 			    android:layout_height="wrap_content"
 			    android:layout_gravity="center"
 			    android:text="@string/help_info_return"
-			    android:textColor="#FFFFFFFF"
+			    android:textColor="@color/white"
 			    android:textSize="24dp" />
 		</LinearLayout>
 	</LinearLayout>

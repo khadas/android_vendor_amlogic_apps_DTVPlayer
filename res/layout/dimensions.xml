@@ -12,7 +12,7 @@
         android:layout_height="50px"
         android:layout_gravity="center_horizontal"
         android:text="@string/parent_control_rrt_set"
-        android:textColor="#FFFFFFFF"
+        android:textColor="@color/white"
         android:textSize="32px" 
         android:layout_marginTop="30px"/>
 

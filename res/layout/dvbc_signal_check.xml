@@ -20,7 +20,7 @@
 		android:layout_width="match_parent"
 		android:layout_height="34dp"
 		android:layout_gravity="center_horizontal"
-		android:textColor="#FFFFFFFF"
+		android:textColor="@color/white"
 		android:gravity="center"
 		android:textSize="24sp" 
 		android:layout_marginTop="20dp"
@@ -78,9 +78,11 @@
 				android:layout_height="wrap_content"
 				android:layout_gravity="center_vertical"
 				android:singleLine="true"
+				android:textColor="@color/white"
 				android:text="@string/ts_frequency"/>
 			<TextView android:id="@+id/edittext_frequency"
 				android:layout_width="300px"
+				android:textColor="@color/white"
 				android:layout_height="wrap_content"
 				android:singleLine="true"
 				android:textSize="20sp"/>
@@ -96,6 +98,7 @@
 			<TextView
 				android:layout_width="200px"
 				android:textSize="20sp"
+				android:textColor="@color/white"
 				android:layout_height="wrap_content"
 				android:layout_gravity="center_vertical"
 				android:singleLine="true"
@@ -104,6 +107,7 @@
 			<TextView
 				android:id="@+id/modulation"
 				android:layout_width="320dp"
+				android:textColor="@color/white"
 				android:layout_height="wrap_content"
 				android:textSize="20sp"
 			></TextView>
@@ -119,6 +123,7 @@
 			<TextView
 				android:layout_width="200px"
 				android:textSize="20sp"
+				android:textColor="@color/white"
 				android:layout_height="wrap_content"
 				android:layout_gravity="center_vertical"
 				android:singleLine="true"
@@ -140,6 +145,7 @@
 			<TextView
 				android:layout_width="200px"
 				android:textSize="20sp"
+				android:textColor="@color/white"
 				android:layout_height="wrap_content"
 				android:layout_gravity="center_vertical"
 				android:singleLine="true"
@@ -167,7 +173,8 @@
 				 <TextView
 				 	android:text="@string/strength"
 				 	android:textSize="20sp"
-					android:layout_width="110px" 
+					android:layout_width="110px"
+					android:textColor="@color/white" 
 					android:layout_height="wrap_content"
 					android:layout_weight="1"/>
 				<ProgressBar
@@ -181,6 +188,7 @@
 					android:id="@+id/snr_value"
 					android:singleLine="true"
 					android:textSize="20sp"
+					android:textColor="@color/white"
 					android:layout_width="70px" 
 					android:layout_height="wrap_content"
 					android:paddingLeft="30px"
@@ -195,6 +203,7 @@
 				 <TextView  
 				 	android:text="@string/quality"
 				 	android:textSize="20sp"
+				 	android:textColor="@color/white"
 					android:layout_width="110px" 
 					android:layout_height="wrap_content"
 					android:layout_weight="1"/>
@@ -210,6 +219,7 @@
 					android:singleLine="true"
 					android:layout_width="70px"
 					android:textSize="20sp"
+					android:textColor="@color/white"
 					android:layout_height="wrap_content"
 					android:paddingLeft="30px"
 					android:layout_weight="1"/>

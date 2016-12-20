@@ -119,7 +119,7 @@ public class DTVPlayer extends DTVActivity{
 		SystemProperties.set("vplayer.hideStatusBar.enable", "true");
 		bundle = this.getIntent().getExtras();
 		mDialogManager = new DialogManager(DTVPlayer.this);
-
+		openVideo();
 		PowerManager pm = (PowerManager) this.getSystemService(Context.POWER_SERVICE);
 		wakeLock = pm.newWakeLock(PowerManager.FULL_WAKE_LOCK |
 			PowerManager.ACQUIRE_CAUSES_WAKEUP |
@@ -135,7 +135,7 @@ public class DTVPlayer extends DTVActivity{
 	public void onConnected(){
 		Log.d(TAG, "connected");
 		super.onConnected();
-		openVideo();
+		//openVideo();
 		DTVPlayerUIInit();
 		mDTVSettings = new DTVSettings(this);
 		//TVMessage msg = TVMessage.inputSourceChanged((int)(int) TVConst.SourceInput.SOURCE_DTV.ordinal());
@@ -377,13 +377,18 @@ public class DTVPlayer extends DTVActivity{
 	protected void onStop(){
 		Log.d(TAG, ">>>>>>>>onStop<<<<<<<<");
 
-		if(player_start_recording && DTVPlayerIsRecording()){
-			DTVPlayerStopRecording();
-			player_start_recording = false;
+		ActivityManager am = (ActivityManager)getSystemService(ACTIVITY_SERVICE);  
+		ComponentName cn = am.getRunningTasks(1).get(0).topActivity;  
+		//we do not to stopplay when we on timesshift
+		if(!cn.getClassName().contains("com.amlogic.DTVPlayer.DTVTimeshifting")){
+				if(player_start_recording && DTVPlayerIsRecording()){
+				DTVPlayerStopRecording();
+				player_start_recording = false;
+			}
+
+			stopPlaying();
 		}
-
-		stopPlaying();
-
+		
 		if(toast!=null)
 			toast.cancel(); 
 		//writeSysFile("/sys/class/graphics/fb0/free_scale","1");
