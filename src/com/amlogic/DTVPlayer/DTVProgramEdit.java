@@ -955,6 +955,8 @@ public class DTVProgramEdit extends DTVActivity{
 					in.setClass(DTVProgramEdit.this, DTVPlayer.class);
 					DTVProgramEdit.this.startActivity(in);
 					DTVProgramEdit.this.finish();
+					//resume video view mode
+					onVideoViewFixStart();
 				}
 				break;
 		}

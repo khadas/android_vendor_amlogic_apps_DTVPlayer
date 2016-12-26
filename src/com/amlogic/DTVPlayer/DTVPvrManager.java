@@ -198,6 +198,8 @@ public class DTVPvrManager extends DTVActivity{
 					intent.setClass(DTVPvrManager.this, DTVSettingsMenu.class);
 					startActivity(intent);
 					DTVPvrManager.this.finish();
+					//resume video view mode
+					onVideoViewFixStart();
 				}
 			}
 		);
@@ -432,6 +434,8 @@ public class DTVPvrManager extends DTVActivity{
 				intent.putExtras(bundle);
 				startActivity(intent);
 				DTVPvrManager.this.finish();
+				//resume video view mode
+				onVideoViewFixStart();
 				return true;	
 		}
 		
@@ -467,7 +471,8 @@ public class DTVPvrManager extends DTVActivity{
 						setBlackoutPolicy(1);
 						filename = getServiceInfoByPostion(cur_select_item);
 						startPlayback(file_name);
-						DTVSetScreenMode(0);
+						//DTVSetScreenMode(0);
+						switchScreenType(0);
 					}	
 				}	
 				return true;
