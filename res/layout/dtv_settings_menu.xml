@@ -2,7 +2,7 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:gravity="center" 
-    android:id="@+id/RelativeLayoutParent">>
+    android:id="@+id/RelativeLayoutParent">
 
 	  <RelativeLayout 
 	    android:id="@+id/VodHomeLayout"
@@ -47,6 +47,7 @@
 		             android:layout_centerHorizontal="true"
 		             android:text="@string/setting_menu_program"
 		             android:textSize="28sp"
+		             android:textColor="@color/white"
 		             android:shadowColor="@android:color/white"
 		            />					
 	         </RelativeLayout> 
@@ -71,6 +72,7 @@
 		             android:layout_centerHorizontal="true"
 		             android:text="@string/setting_menu_search"
 		             android:textSize="28sp"
+		             android:textColor="@color/white"
 		             android:shadowColor="@android:color/white"
 		            />					
 		         </RelativeLayout> 
@@ -93,6 +95,7 @@
 			             android:layout_centerHorizontal="true"
 			             android:text="@string/setting_menu_system"
 			             android:textSize="28sp"
+			             android:textColor="@color/white"
 			             android:shadowColor="@android:color/white"
 			            />					
 		         </RelativeLayout> 
@@ -116,6 +119,7 @@
 			             android:layout_centerHorizontal="true"
 			             android:text="@string/setting_menu_av"
 			             android:textSize="28sp"
+			             android:textColor="@color/white"
 			             android:shadowColor="@android:color/white"
 			            />					
 		         </RelativeLayout> 

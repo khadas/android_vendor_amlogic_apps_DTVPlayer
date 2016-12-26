@@ -375,13 +375,16 @@ public class DTVPlayer extends DTVActivity{
 
 	@Override
 	protected void onStop(){
-		Log.d(TAG, ">>>>>>>>onStop<<<<<<<<");
+		
 
 		ActivityManager am = (ActivityManager)getSystemService(ACTIVITY_SERVICE);  
-		ComponentName cn = am.getRunningTasks(1).get(0).topActivity;  
+		ComponentName cn = am.getRunningTasks(1).get(0).topActivity;
+		Log.d(TAG, ">>>>>>>>onStop<<<<<<<< top:"+cn.getClassName());
 		//we do not to stopplay when we on timesshift
-		if(!cn.getClassName().contains("com.amlogic.DTVPlayer.DTVTimeshifting")){
-				if(player_start_recording && DTVPlayerIsRecording()){
+		if(!cn.getClassName().contains("com.amlogic.DTVPlayer.DTVTimeshifting")&&
+				!cn.getClassName().contains("com.amlogic.DTVPlayer.DTVPvrPlayer")){
+			
+			if(player_start_recording && DTVPlayerIsRecording()){
 				DTVPlayerStopRecording();
 				player_start_recording = false;
 			}
@@ -3122,10 +3125,13 @@ public class DTVPlayer extends DTVActivity{
 
 						Button no = (Button)window.findViewById(R.id.no);
 						no.setText(R.string.no);
+						no.setTextColor(Color.WHITE);
 						Button yes = (Button)window.findViewById(R.id.yes);
 						yes.setText(R.string.yes);
+						yes.setTextColor(Color.WHITE);
 						no.setOnClickListener(new OnClickListener(){
 							public void onClick(View v) {
+								Log.d(TAG,"mSubtitle no onClick");
 								mCustomDialog.dismissDialog();
 							}
 						});	 
@@ -3144,6 +3150,7 @@ public class DTVPlayer extends DTVActivity{
 									((DTVActivity)mContext).DTVSetSubtitleStatus(false);	
 								}
 								mCustomDialog.dismissDialog();
+								Log.d(TAG,"mSubtitle yes onClick");
 							}
 						});	    
 					}
@@ -3158,6 +3165,7 @@ public class DTVPlayer extends DTVActivity{
 						return false;
 					}
 					public void showWindowDetail(Window window){
+						Log.d(TAG,"mSubtitle showWindowDetail -1");
 						TextView title = (TextView)window.findViewById(R.id.title);
 						title.setText(R.string.dtvplayer_subtitle_language_set);
 						final CheckBox checkboxSubtitleSwitch = (CheckBox)window.findViewById(R.id.checkSubtitleSwitch);
@@ -3170,10 +3178,13 @@ public class DTVPlayer extends DTVActivity{
 
 						Button no = (Button)window.findViewById(R.id.no);
 						no.setText(R.string.no);
+						no.setTextColor(Color.WHITE);
 						Button yes = (Button)window.findViewById(R.id.yes);
 						yes.setText(R.string.yes);
+						yes.setTextColor(Color.WHITE);
 						no.setOnClickListener(new OnClickListener(){
 							public void onClick(View v) {
+								Log.d(TAG,"mSubtitle no onClick -1");
 								mCustomDialog.dismissDialog();
 							}
 						});	 
@@ -3283,8 +3294,10 @@ public class DTVPlayer extends DTVActivity{
 					mEditText.setText(null);
 					Button no = (Button)window.findViewById(R.id.no);
 					no.setText(R.string.no);
+					no.setTextColor(Color.WHITE);
 					Button yes = (Button)window.findViewById(R.id.yes);
 					yes.setText(R.string.yes);
+					yes.setTextColor(Color.WHITE);
 					no.setOnClickListener(new OnClickListener(){
 						public void onClick(View v) {
 							mCustomDialog.dismissDialog();

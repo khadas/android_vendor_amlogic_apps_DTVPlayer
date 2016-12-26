@@ -685,8 +685,10 @@ public class DTVProgramManager extends DTVActivity{
 												mAddText.setText(null);
 												Button no = (Button)window.findViewById(R.id.no);
 												no.setText(R.string.no);
+												no.setTextColor(Color.WHITE);
 												Button yes = (Button)window.findViewById(R.id.yes);
 												yes.setText(R.string.yes);
+												yes.setTextColor(Color.WHITE);
 												no.setOnClickListener(new OnClickListener(){
 													public void onClick(View v) {
 														mAddCustomDialog.dismissDialog();
@@ -719,8 +721,10 @@ public class DTVProgramManager extends DTVActivity{
 												mEditText.setText(mProgramGroup[getProgramCurrentIndex()].getName());
 												Button no = (Button)window.findViewById(R.id.no);
 												no.setText(R.string.no);
+												no.setTextColor(Color.WHITE);
 												Button yes = (Button)window.findViewById(R.id.yes);
 												yes.setText(R.string.yes);
+												yes.setTextColor(Color.WHITE);
 												no.setOnClickListener(new OnClickListener(){
 													public void onClick(View v) {
 														mEditCustomDialog.dismissDialog();
@@ -808,8 +812,10 @@ public class DTVProgramManager extends DTVActivity{
 											mEditText.setText(mTVProgramList[pos].getName());
 											Button no = (Button)window.findViewById(R.id.no);
 											no.setText(R.string.no);
+											no.setTextColor(Color.WHITE);
 											Button yes = (Button)window.findViewById(R.id.yes);
 											yes.setText(R.string.yes);
+											yes.setTextColor(Color.WHITE);
 											no.setOnClickListener(new OnClickListener(){
 												public void onClick(View v) {
 													mEditCustomDialog.dismissDialog();

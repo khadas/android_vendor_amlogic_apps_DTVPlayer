@@ -1867,8 +1867,10 @@ public class DTVScanDvbsConfig  extends DTVActivity {
 
 		Button no = (Button)window.findViewById(R.id.no);
 		no.setText(R.string.no);
+		no.setTextColor(Color.WHITE);
 		Button yes = (Button)window.findViewById(R.id.yes);
 		yes.setText(R.string.yes);
+		yes.setTextColor(Color.WHITE);
 		TextView title = (TextView)window.findViewById(R.id.title);
 		title.setTextColor(Color.YELLOW);
 		title.setText(getString(R.string.edit_title));
@@ -3793,8 +3795,10 @@ public class DTVScanDvbsConfig  extends DTVActivity {
 
 		Button no = (Button)window.findViewById(R.id.no);
 		no.setText(R.string.no);
+		no.setTextColor(Color.WHITE);
 		Button yes = (Button)window.findViewById(R.id.yes);
 		yes.setText(R.string.yes);
+		yes.setTextColor(Color.WHITE);
 		TextView title = (TextView)window.findViewById(R.id.title);
 		title.setTextColor(Color.YELLOW);
 		title.setText(getString(R.string.dish_setup_conf_button_des8_info));
@@ -5392,8 +5396,10 @@ public class DTVScanDvbsConfig  extends DTVActivity {
 
 		Button no = (Button)window.findViewById(R.id.no);
 		no.setText(R.string.no);
+		no.setTextColor(Color.WHITE);
 		Button yes = (Button)window.findViewById(R.id.yes);
 		yes.setText(R.string.yes);
+		yes.setTextColor(Color.WHITE);
 		TextView title = (TextView)window.findViewById(R.id.title);
 		title.setTextColor(Color.YELLOW);
 		title.setText(getString(R.string.scan_mode));
@@ -5717,8 +5723,10 @@ public class DTVScanDvbsConfig  extends DTVActivity {
 
 		Button no = (Button)window.findViewById(R.id.no);
 		no.setText(R.string.no);
+		no.setTextColor(Color.WHITE);
 		Button yes = (Button)window.findViewById(R.id.yes);
 		yes.setText(R.string.yes);
+		yes.setTextColor(Color.WHITE);
 		TextView title = (TextView)window.findViewById(R.id.title);
 		title.setTextColor(Color.YELLOW);
 		title.setText(getString(R.string.edit_title));
@@ -5981,8 +5989,10 @@ public class DTVScanDvbsConfig  extends DTVActivity {
 
 		Button no = (Button)window.findViewById(R.id.no);
 		no.setText(R.string.no);
+		no.setTextColor(Color.WHITE);
 		Button yes = (Button)window.findViewById(R.id.yes);
 		yes.setText(R.string.yes);
+		yes.setTextColor(Color.WHITE);
 		TextView title = (TextView)window.findViewById(R.id.title);
 		title.setTextColor(Color.YELLOW);
 		title.setText(getString(R.string.add_title));
@@ -6258,8 +6268,10 @@ public class DTVScanDvbsConfig  extends DTVActivity {
 
 		Button no = (Button)window.findViewById(R.id.no);
 		no.setText(R.string.no);
+		no.setTextColor(Color.WHITE);
 		Button yes = (Button)window.findViewById(R.id.yes);
 		yes.setText(R.string.yes);
+		yes.setTextColor(Color.WHITE);
 		TextView title = (TextView)window.findViewById(R.id.title);
 		title.setTextColor(Color.YELLOW);
 		title.setText(getString(R.string.edit_title));
@@ -6699,8 +6711,10 @@ public class DTVScanDvbsConfig  extends DTVActivity {
 
 		Button no = (Button)window.findViewById(R.id.no);
 		no.setText(R.string.no);
+		no.setTextColor(Color.WHITE);
 		Button yes = (Button)window.findViewById(R.id.yes);
 		yes.setText(R.string.yes);
+		yes.setTextColor(Color.WHITE);
 		TextView title = (TextView)window.findViewById(R.id.title);
 		title.setTextColor(Color.YELLOW);
 		title.setText(getString(R.string.add_title));

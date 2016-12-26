@@ -76,8 +76,10 @@ abstract public class MutipleChoiseDialog {
 	private void dialogInit(Window window,String[] item,boolean[] b,int pos){
 		no = (Button)window.findViewById(R.id.no);
 		no.setText(R.string.no);
+		no.setTextColor(Color.WHITE);
 		yes = (Button)window.findViewById(R.id.yes);
 		yes.setText(R.string.yes);
+		yes.setTextColor(Color.WHITE);
 		title = (TextView)window.findViewById(R.id.title);
 		title.setTextColor(Color.YELLOW);
 		onSetMessage(title);

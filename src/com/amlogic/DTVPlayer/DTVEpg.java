@@ -1057,8 +1057,10 @@ public class DTVEpg extends DTVActivity{
 
 		Button no = (Button)window.findViewById(R.id.no);
 		no.setText(R.string.no);
+		no.setTextColor(Color.WHITE);
 		Button yes = (Button)window.findViewById(R.id.yes);
 		yes.setText(R.string.yes);
+		yes.setTextColor(Color.WHITE);
 		TextView title = (TextView)window.findViewById(R.id.title);
 		title.setTextColor(Color.YELLOW);
 		//title.setText(getString(R.string.scan_mode));

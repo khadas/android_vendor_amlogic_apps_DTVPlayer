@@ -3825,8 +3825,10 @@ public class DTVSettingsMenu extends DTVActivity {
 
 		Button no = (Button)window.findViewById(R.id.no);
 		no.setText(R.string.no);
+		no.setTextColor(Color.WHITE);
 		Button yes = (Button)window.findViewById(R.id.yes);
 		yes.setText(R.string.yes);
+		yes.setTextColor(Color.WHITE);
 		TextView title = (TextView)window.findViewById(R.id.title);
 		title.setTextColor(Color.YELLOW);
 		title.setText(getString(R.string.dvbs_unicable_user_define));
@@ -5675,9 +5677,10 @@ public class DTVSettingsMenu extends DTVActivity {
 		editText.setTextColor(Color.WHITE);
 		Button no = (Button)window.findViewById(R.id.no);
 		no.setText(R.string.no);
+		no.setTextColor(Color.WHITE);
 		Button yes = (Button)window.findViewById(R.id.yes);
 		yes.setText(R.string.yes);
-
+		yes.setTextColor(Color.WHITE);
 		no.setFocusableInTouchMode(true);
 		no.setOnClickListener(new OnClickListener(){
 		          public void onClick(View v) {
@@ -5784,7 +5787,7 @@ public class DTVSettingsMenu extends DTVActivity {
 
 		Button yes = (Button)window.findViewById(R.id.yes);
 		yes.setText(R.string.yes);
-		no.setTextColor(Color.WHITE);
+		yes.setTextColor(Color.WHITE);
 
 		no.setFocusableInTouchMode(true);
 		no.setOnClickListener(new OnClickListener(){
@@ -6220,11 +6223,9 @@ public class DTVSettingsMenu extends DTVActivity {
 	private void showPvrManagerPasswordDialog(){
 		new PasswordDialog(DTVSettingsMenu.this){
 			public void onCheckPasswordIsRight(){
-				Log.d(TAG,">>>>>PASSWORD IS RIGHT!<<<<<");
-					stopPlaying();
-					Intent Intent_pvr_manager = new Intent();
-					Intent_pvr_manager.setClass(DTVSettingsMenu.this,DTVPvrManager.class);
-					startActivity(Intent_pvr_manager);
+					Log.d(TAG,">>>>>PASSWORD IS RIGHT!<<<<<");
+					DTVStartPvrManager();
+					//DTVStartProgramManager();
 					DTVSettingsMenu.this.finish();
 			}
 			public void onCheckPasswordIsFalse(){
@@ -6656,9 +6657,16 @@ public class DTVSettingsMenu extends DTVActivity {
 		bundle.putInt("db_id", DTVPlayerGetCurrentProgramID());
 		intent.putExtras(bundle);
 		intent.setClass(this, DTVProgramEdit.class);
-		//startActivityForResult(intent, 11);
-		//onHide();
 		startActivity(intent);
+	}
+	private void DTVStartPvrManager(){
+			stopPlaying();
+			Intent intent = new Intent();
+			//Bundle bundle = new Bundle();
+			//bundle.putInt("db_id", DTVPlayerGetCurrentProgramID());
+			//intent.putExtras(bundle);
+			intent.setClass(this,DTVPvrManager.class);
+			startActivity(intent);
 	}
 
 	private void DTVStartVChip(){

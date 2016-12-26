@@ -237,6 +237,7 @@ public class DTVPvrPlayer extends DTVActivity{
 	TextView Text_screentype_info=null;
 	TextView Text_parent_control_info_icon=null;
 	TextView Text_MTS_info=null;
+	MenuDialog MenuDialog_obj = null;
 
 	void DTVPvrPlayerUIInit(){
 		findViewById(R.id.RelativeLayout_video).setOnClickListener(new MouseClick());
@@ -330,7 +331,7 @@ public class DTVPvrPlayer extends DTVActivity{
 				String[] menuItems = new String[menu.MENU_NUM.ordinal()];
 				for (int i = 0; i < menuItems.length; i++)
 					menuItems[i] = ctx.getString(MENUS[i]);
-				new MenuDialog(DTVPvrPlayer.this, menuItems, 0);
+				MenuDialog_obj = new MenuDialog(DTVPvrPlayer.this, menuItems, 0);
 			}
         });
 
@@ -544,7 +545,12 @@ public class DTVPvrPlayer extends DTVActivity{
     }
 
 	private void gotoBack(){
-
+		if(MenuDialog_obj != null){
+			MenuDialog_obj.dismissDialog();
+			MenuDialog_obj = null;
+		}
+		stopPlayback();
+		Log.d(TAG, "MenuDialog_obj  dismiss gotoBack ");
 		Intent intent = new Intent();
 		intent.setClass(DTVPvrPlayer.this, DTVPvrManager.class);
 		startActivity(intent);
@@ -1228,8 +1234,10 @@ public class DTVPvrPlayer extends DTVActivity{
 
 						Button no = (Button)window.findViewById(R.id.no);
 						no.setText(R.string.no);
+						no.setTextColor(Color.WHITE);
 						Button yes = (Button)window.findViewById(R.id.yes);
 						yes.setText(R.string.yes);
+						yes.setTextColor(Color.WHITE);
 						no.setOnClickListener(new OnClickListener(){
 							public void onClick(View v) {
 								mCustomDialog.dismissDialog();
@@ -1274,8 +1282,10 @@ public class DTVPvrPlayer extends DTVActivity{
 
 						Button no = (Button)window.findViewById(R.id.no);
 						no.setText(R.string.no);
+						no.setTextColor(Color.WHITE);
 						Button yes = (Button)window.findViewById(R.id.yes);
 						yes.setText(R.string.yes);
+						yes.setTextColor(Color.WHITE);
 						no.setOnClickListener(new OnClickListener(){
 							public void onClick(View v) {
 
