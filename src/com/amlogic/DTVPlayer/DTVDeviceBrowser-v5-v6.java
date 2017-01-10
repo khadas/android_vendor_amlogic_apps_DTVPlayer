@@ -639,7 +639,7 @@ public class DTVDeviceBrowser extends DTVActivity implements OnItemClickListener
 		deviceList.clear();
 		//Log.d(TAG,"sdk int: "+Build.VERSION.SDK_INT);
 		//Log.d(TAG,"getDevice sum="+deviceList.size());
-		if(Build.VERSION.SDK_INT==23 || Build.VERSION.SDK_INT==24 )
+		if(Build.VERSION.SDK_INT==23 || Build.VERSION.SDK_INT==24 || Build.VERSION.SDK_INT==25 )
 		{
 			getPvrDevice_V6();
 			return;
@@ -679,7 +679,7 @@ public class DTVDeviceBrowser extends DTVActivity implements OnItemClickListener
 		deviceList.clear();
 		//Log.d(TAG,"browser sdk int: "+Build.VERSION.SDK_INT);
 		//Log.d(TAG,"browser getDevice sum="+deviceList.size());
-		if(Build.VERSION.SDK_INT==23 || Build.VERSION.SDK_INT==24 )
+		if(Build.VERSION.SDK_INT==23 || Build.VERSION.SDK_INT==24 || Build.VERSION.SDK_INT==25)
 		{
 			getPvrDevice_V6();
 			return;
@@ -826,7 +826,7 @@ public class DTVDeviceBrowser extends DTVActivity implements OnItemClickListener
 
 	private void readUsbDevice(String path,DeviceItem item,int mode) 	{ 	
 		
-			if ( Build.VERSION.SDK_INT == 24 ) {
+			if ( Build.VERSION.SDK_INT == 24 || Build.VERSION.SDK_INT==25) {
 				readUsbDevice(path, item);
 			}
 

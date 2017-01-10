@@ -25,7 +25,7 @@ public class StorageUtils {
             else
                 return false;
         }
-        else if ( Build.VERSION.SDK_INT == 24){
+        else if ( Build.VERSION.SDK_INT == 24|| Build.VERSION.SDK_INT == 25){
             if (file.getPath().startsWith("/storage/") && !(file.getPath().startsWith("/storage/external_storage/sdcard")))
                 return true;
             else

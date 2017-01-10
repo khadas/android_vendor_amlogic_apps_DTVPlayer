@@ -799,7 +799,7 @@ public class DTVRecordDevice extends DTVActivity {
 		Log.d(TAG,"--StorageUtils device path: "+StorageUtils.externalDirBase);
 		Log.d(TAG,"sdk int: "+Build.VERSION.SDK_INT);
 		Log.d(TAG,"getDevice sum="+deviceList.size());
-		if(Build.VERSION.SDK_INT==23 || Build.VERSION.SDK_INT==24)
+		if(Build.VERSION.SDK_INT==23 || Build.VERSION.SDK_INT==24|| Build.VERSION.SDK_INT==25)
 		{
 			getPvrDevice_V6();
 			return;
@@ -855,7 +855,7 @@ public class DTVRecordDevice extends DTVActivity {
 
 	private void getDeviceOnBack() {
 		deviceList.clear();
-		if(Build.VERSION.SDK_INT==23 || Build.VERSION.SDK_INT == 24)
+		if(Build.VERSION.SDK_INT==23 || Build.VERSION.SDK_INT == 24|| Build.VERSION.SDK_INT==25)
 		{
 			getPvrDevice_V6();
 			return;
@@ -1012,7 +1012,7 @@ public class DTVRecordDevice extends DTVActivity {
 
 
 	private void readUsbDevice(String path,DeviceItem item,int mode) 	{ 	
-			if ( Build.VERSION.SDK_INT == 24 ) {
+			if ( Build.VERSION.SDK_INT == 24 || Build.VERSION.SDK_INT==25) {
 				readUsbDevice(path, item);
 				return;
 			}

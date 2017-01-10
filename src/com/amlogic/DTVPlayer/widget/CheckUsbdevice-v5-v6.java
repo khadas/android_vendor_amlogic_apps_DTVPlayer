@@ -96,7 +96,7 @@ public class CheckUsbdevice
 	public String checkPvrFilePath(String file_path){
 		String path=null;
 		//Log.d(TAG, "file_path:"+file_path);
-		if(Build.VERSION.SDK_INT==23 || Build.VERSION.SDK_INT == 24)
+		if(Build.VERSION.SDK_INT==23 || Build.VERSION.SDK_INT == 24|| Build.VERSION.SDK_INT == 25)
 		{
 			return checkPvrFilePath_6v(file_path);
 		}
@@ -140,7 +140,7 @@ public class CheckUsbdevice
 
 	public String getDevice() {
 
-		if(Build.VERSION.SDK_INT==23 || Build.VERSION.SDK_INT == 24)
+		if(Build.VERSION.SDK_INT==23 || Build.VERSION.SDK_INT == 24|| Build.VERSION.SDK_INT == 25)
 		{
 			return getStoragePath();
 		}
@@ -277,7 +277,7 @@ public class CheckUsbdevice
 
 	public boolean findSdcardString(String path){ 	
 		 Runtime runtime = Runtime.getRuntime();  
-        if(Build.VERSION.SDK_INT==23 || Build.VERSION.SDK_INT == 24)
+        if(Build.VERSION.SDK_INT==23 || Build.VERSION.SDK_INT == 24|| Build.VERSION.SDK_INT == 25)
         {
         	Log.d(TAG,"findSdcardString_v6 path"+path);
             return findSdcardString_v6(path);	
@@ -449,7 +449,7 @@ public class CheckUsbdevice
 	public List<String> getSatellitesDBFileList() {
 		String externalStorageState = Environment.getExternalStorageState();  
 
-		if(Build.VERSION.SDK_INT==23 || Build.VERSION.SDK_INT == 24)
+		if(Build.VERSION.SDK_INT==23 || Build.VERSION.SDK_INT == 24|| Build.VERSION.SDK_INT == 25)
 		{
 			return getSatellitesDBFileList_6v();
 		}
@@ -570,7 +570,7 @@ public class CheckUsbdevice
 	}
 	public List<File> getPvrFileList() {
 		String externalStorageState = Environment.getExternalStorageState();  
-		if(Build.VERSION.SDK_INT==23 || Build.VERSION.SDK_INT == 24)
+		if(Build.VERSION.SDK_INT==23 || Build.VERSION.SDK_INT == 24|| Build.VERSION.SDK_INT == 25)
 		{
 			//Log.d(TAG,"getPvrFileList--v6");
 			return getPvrFileList_6v();
