@@ -5305,21 +5305,25 @@ public class DTVSettingsMenu extends DTVActivity {
 		checkboxStatus.setFocusable(false);
 
 		if(region.contains("DVB-T")){
+			stopPlaying();
 			lock(TVChannelParams.dvbtParams(mDTVSettings.getDvbtScanFrequency()*1000,mDTVSettings.getDvbtScanBandwidth()));
 
 			final  RadioGroup mRadioGroup = (RadioGroup) window.findViewById(R.id.radiogroup);
 			mRadioGroup.setVisibility(View.VISIBLE);
 			final  RadioButton mRadio1 = (RadioButton) window.findViewById(R.id.dvbt);
 			mRadio1.setText("DVBT");
+			//mRadio1.setTextColor(Color.WHITE);
 			final  RadioButton mRadio2 = (RadioButton) window.findViewById(R.id.dvbt2);
 			mRadio2.setText("DVBT2");
-
+			//mRadio2.setTextColor(Color.WHITE);
 			mRadioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener(){
 			  @Override
 			  public void onCheckedChanged(RadioGroup group, int checkedId) {
+			  	Log.d(TAG, "onCheckedChanged dvbt !!!");
 			   if (checkedId == mRadio1.getId()) {
 			    	lock(TVChannelParams.dvbtParams(mDTVSettings.getDvbtScanFrequency()*1000,mDTVSettings.getDvbtScanBandwidth()));
 			   } else if (checkedId == mRadio2.getId()) {
+			   	Log.d(TAG, "onCheckedChanged dvbt2 !!!");
 			   	lock(TVChannelParams.dvbt2Params(mDTVSettings.getDvbtScanFrequency()*1000,mDTVSettings.getDvbtScanBandwidth()));
 			   }
 			  }

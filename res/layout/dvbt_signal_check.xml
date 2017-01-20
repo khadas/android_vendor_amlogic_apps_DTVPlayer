@@ -51,10 +51,12 @@
 			        android:id="@+id/dvbt"
 			        android:layout_width="wrap_content"
 			        android:layout_height="wrap_content"
+			        android:background="@color/white"
 			        android:checked="true"/>
 			    <RadioButton
 			        android:id="@+id/dvbt2"
 			        android:layout_width="wrap_content"
+			        android:background="@color/white"
 			        android:layout_height="wrap_content"/>
 		</RadioGroup>	
 		
