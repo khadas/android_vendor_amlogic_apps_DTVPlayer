@@ -49,7 +49,7 @@
 	    
 			<RelativeLayout
 			    	  android:layout_width="400px"
-		    		  android:layout_height="268px" 	     	
+		    		  android:layout_height="304px" 	     	
 		    		  android:layout_marginLeft="70dp"	 
 		    		  android:background="@drawable/tv"
 		    		  android:id="@+id/rating_tv_bg_layout"
@@ -58,8 +58,8 @@
 		  		<LinearLayout
 			    	  android:layout_width="384px"
 		    		  android:layout_height="276px"
-		    		  android:layout_marginTop="30px"	     	
-		    		  android:layout_marginLeft="124px"	  
+		    		  android:layout_marginTop="35px"	     	
+		    		  android:layout_marginLeft="146px"	  
 		    		  android:orientation="horizontal"
 		  			>
 		  		<!-- row 0 -->	

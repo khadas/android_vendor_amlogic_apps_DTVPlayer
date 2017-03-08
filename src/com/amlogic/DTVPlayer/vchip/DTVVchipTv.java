@@ -31,12 +31,12 @@ import com.amlogic.tvutil.TVMessage;
 public class DTVVchipTv extends DTVActivity{
     private static final String TAG = "DTVVchipTv";
     
-    static private int[] Rating_status_ALL={1,1,1,1,1,1,};
-    static private int[] Rating_status_FV={-1,1,-1,-1,-1,-1,};
-    static private int[] Rating_status_V={-1,-1,-1,1,1,1,};
-    static private int[] Rating_status_S={-1,-1,-1,1,1,1,};
-    static private int[] Rating_status_L={-1,-1,-1,1,1,1,};
-    static private int[] Rating_status_D={-1,-1,-1,1,1,-1,};
+    static private int[] Rating_status_ALL={1,1,1,1,1,1,1,};
+    static private int[] Rating_status_FV={-1,-1,1,-1,-1,-1,-1,};
+    static private int[] Rating_status_V={-1,-1,-1,-1,1,1,1,};
+    static private int[] Rating_status_S={-1,-1,-1,-1,1,1,1,};
+    static private int[] Rating_status_L={-1,-1,-1,-1,1,1,1,};
+    static private int[] Rating_status_D={-1,-1,-1,-1,1,1,-1,};
     
     ListView list_mpaa_all;
     RatingAdapter list_mpaa_adapter_all=null;
@@ -68,7 +68,7 @@ public class DTVVchipTv extends DTVActivity{
     }
 
 	private TVDimension[] dm=new TVDimension[6];
-	String[] abb={"TV-Y","TV-Y7","TV-G","TV-PG","TV-14","TV-MA"};	
+	String[] abb={"TV-NONE","TV-Y","TV-Y7","TV-G","TV-PG","TV-14","TV-MA"};	
     protected void onStart(){
 		super.onStart();
 	
@@ -125,15 +125,26 @@ public class DTVVchipTv extends DTVActivity{
         	int p=(int)position;
         	switch (arg0.getId()) {
 				case R.id.list_All:
-					if(p<=1){
+					if(p==0){
 						if(Rating_status_ALL[p]==0) //block
 			        	{
-							for(int i=p;i<2;i++)
+							Rating_status_ALL[p]=1;
+							blockAll();
+			        	}	
+			        	else  //unblock
+			        	{
+			        		Rating_status_ALL[p]=0;
+			        	}	
+					}
+					else if(p<=2){
+						if(Rating_status_ALL[p]==0) //block
+			        	{
+							for(int i=p;i<3;i++)
 			        		{
 								Rating_status_ALL[i]=1;
 			        		}
-							if(Rating_status_FV[1]==0)
-								Rating_status_FV[1]=1;
+							if(Rating_status_FV[2]==0)
+								Rating_status_FV[2]=1;
 							
 			        	}	
 			        	else  //unblock
@@ -146,8 +157,8 @@ public class DTVVchipTv extends DTVActivity{
 			        				Rating_status_ALL[i]=0;
 			        		}	
 
-							if(Rating_status_FV[1]==1&&p==1)
-								Rating_status_FV[1]=0;
+							if(Rating_status_FV[2]==1&&p==2)
+								Rating_status_FV[2]=0;
 			        	}	
 						
 					}
@@ -173,7 +184,7 @@ public class DTVVchipTv extends DTVActivity{
 			        	}	
 			        	else //unblock
 			        	{
-			        		for(int i=2;i<=p;i++)
+			        		for(int i=3;i<=p;i++)
 			        		{
 			        			if(Rating_status_ALL[i]<0)
 			        				continue;
@@ -221,8 +232,8 @@ public class DTVVchipTv extends DTVActivity{
 		        				Rating_status_FV[i]=0;
 		        		}	
 
-						Rating_status_ALL[0]=0;
 						Rating_status_ALL[1]=0;
+						Rating_status_ALL[2]=0;
 		        	}	
 					
 					list_mpaa_adapter_fv.notifyDataSetChanged();
