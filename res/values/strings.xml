@@ -36,12 +36,12 @@
 	<string name="type_16_9_COMBINED">16:9 COMBINED</string>
 
 	<array name="settings_screen_mode" translatable="false">
-		<item>Full Screen</item>  
-		<item>4:3</item>	    
-		<item>4:3 LETTER BOX</item>	
+		<item>Full Screen</item>
+		<item>4:3</item>
+		<item>4:3 LETTER BOX</item>
 		<item>4:3 PAN SCAN</item>
-		<item>4:3 COMBINED</item>	
-		<item>16:9</item>	
+		<item>4:3 COMBINED</item>
+		<item>16:9</item>
 		<item>16:9 LETTER BOX</item>
 		<item>16:9 PAN SCAN</item>
 		<item>16:9 COMBINED</item>
@@ -50,27 +50,27 @@
 	 <string name="stop">Stop</string>
 	<string name="stop_scan">Stop scan?</string>
 	<string name="mono">Mono</string>
-	<string name="SAP">SAP</string>	
+	<string name="SAP">SAP</string>
 	<string name="stereo">Stereo</string>
 	<string name="left">Left</string>
-	<string name="right">Right</string>	
-	<string name="sub">SUB</string>	
+	<string name="right">Right</string>
+	<string name="sub">SUB</string>
 
 	<string name="add">Add</string>
 	<string name="edit">Edit</string>
-	<string name="delete">Delete</string>	
+	<string name="delete">Delete</string>
 	<string name="move">Move</string>
 	<string name="add_fav">Add into favorite</string>
 	<string name="del_fav">Move from favorite</string>
 	<string name="add_lock">Add Lock</string>
 	<string name="del_lock">Delete Lock</string>
 	<string name="add_skip">Add into skip</string>
-	<string name="del_skip">Move from skip</string>	
+	<string name="del_skip">Move from skip</string>
 
-	<string name="add_into_group">Add into group</string>	
-	
+	<string name="add_into_group">Add into group</string>
+
     <string name="dtvplayer_loading">Loading...</string>
-	<!--main menu button info--> 
+	<!--main menu button info-->
 	<string name="dtvplayer_menu_button_list">Channel List</string>
 	<string name="dtvplayer_menu_button_epg">EPG</string>
 	<string name="dtvplayer_menu_button_settings">Settings</string>
@@ -103,7 +103,7 @@
 	<string name="dtvplayer_no_signal"> No signal</string>
 	<string name="dtvplayer_scrambled">Scrambled program</string>
 	<string name="dtvplayer_signal_bad">Signal quality is bad</string>
-	<string name="dtvplayer_ac3_no_licence">AC3 audio no lience</string>
+	<string name="dtvplayer_ac3_no_licence">AC3 audio no licence</string>
 
 	<string name="dtvplayer_subtitle_language_set">Subtitle language set</string>
 	<string name="dtvplayer_audio_language_set">Audio language set</string>
@@ -117,29 +117,29 @@
 	<!--device browser-->
 	<string name="download_sel_confirm">Save recorded stream on selected storage device?</string>
 	<string name="usb_removed">USB device removed. Please check</string>
-	<string name="usb_mounted">Testing to USB device</string>	
-	<string name="selected_help">Please choose the storage device and press OK</string>	
+	<string name="usb_mounted">Testing to USB device</string>
+	<string name="selected_help">Please choose the storage device and press OK</string>
 	<string name="volume">Removable disk</string>
-	<string name="pls_insert_usb">Please insert USB device</string>	
+	<string name="pls_insert_usb">Please insert USB device</string>
 	<string name="volume_total">Total space:</string>
-	<string name="volume_available">Available space:</string>	
-	<string name="no_usb_device">Not Find Any USB Device</string>	
+	<string name="volume_available">Available space:</string>
+	<string name="no_usb_device">Not Find Any USB Device</string>
 
-    <!--settings help--> 
+    <!--settings help-->
     <string name="help_info_move">Move</string>
   	<string name="help_info_select">Select</string>
   	<string name="help_info_return">Return</string>
   	<string name="help_info_number">Number</string>
-  	
+
     <!--settings-->
     <string name="settings_title">Settings</string>
 	<array name="settings_content" translatable="false">
-		<item>Channel Search</item>  
-		<item>Subtitle Switch</item>	    
-		<item>Picture Size</item>	
+		<item>Channel Search</item>
+		<item>Subtitle Switch</item>
+		<item>Picture Size</item>
 		<item>Audio Track</item>
-		<item>Factory data reset</item>	
-		<item>Set password</item>	
+		<item>Factory data reset</item>
+		<item>Set password</item>
 		<item>Select storage device</item>
 		<item>Timeshifting setting</item>
 		<item>Parental rating age</item>
@@ -147,12 +147,12 @@
 	</array>
 
 	<array name="settings_content_atsc" translatable="false">
-		<item>Channel Search</item>  
-		<item>Subtitle Switch</item>	    
-		<item>Picture Size</item>	
+		<item>Channel Search</item>
+		<item>Subtitle Switch</item>
+		<item>Picture Size</item>
 		<item>Audio Track</item>
-		<item>Factory data reset</item>	
-		<item>Set password</item>	
+		<item>Factory data reset</item>
+		<item>Set password</item>
 		<item>Select storage device</item>
 		<item>Timeshifting setting</item>
 		<item>Parental rating age</item>
@@ -163,28 +163,28 @@
 	</array>
 
 	<array name="av_settings_content" translatable="false">
-		<item>Picture Size</item>	
+		<item>Picture Size</item>
 		<item>Subtitle Language</item>
 		<item>Audio Language</item>
-		<item>Blackout Policy</item> 
-		<item>Information Show Time</item> 
+		<item>Blackout Policy</item>
+		<item>Information Show Time</item>
 	</array>
 
 	<array name="system_settings_content" translatable="false">
-		<item>Recall List</item>	
-		<item>Subtitle Switch</item>	    
-		<item>Factory data reset</item>	
-		<item>Set password</item>	
+		<item>Recall List</item>
+		<item>Subtitle Switch</item>
+		<item>Factory data reset</item>
+		<item>Set password</item>
 		<item>Parental rating age</item>
 		<item>TTX Region</item>
 		<item>Check for Update</item>
 	</array>
 
-	<array name="system_settings_content_atsc" translatable="false">	
-		<item>Recall List</item>	
-		<item>Subtitle Switch</item>	    
-		<item>Factory data reset</item>	
-		<item>Set password</item>	
+	<array name="system_settings_content_atsc" translatable="false">
+		<item>Recall List</item>
+		<item>Subtitle Switch</item>
+		<item>Factory data reset</item>
+		<item>Set password</item>
 		<item>Parental rating age</item>
 		<item>TTX Region</item>
 		<item>Closed Caption</item>
@@ -192,13 +192,13 @@
 	</array>
 
 	<array name="search_settings_content_dvbs" translatable="false">
-		<item>Dish Setup</item>	
+		<item>Dish Setup</item>
 		<item>DB Management</item>
 		<item>Unicable Configure</item>
 	</array>
 
 	<array name="search_settings_content_dvbt" translatable="false">
-		<item>Auto Scan</item>	
+		<item>Auto Scan</item>
 		<item>Manual Scan</item>
 		<item>NIT Scan</item>
 		<item>Area</item>
@@ -206,7 +206,7 @@
 	</array>
 
 	<array name="search_settings_content_dvbc" translatable="false">
-		<item>Auto Scan</item>	
+		<item>Auto Scan</item>
 		<item>Manual Scan</item>
 		<item>NIT Scan</item>
 	</array>
@@ -215,15 +215,15 @@
 		<item>Auto Scan</item>
 		<item>Manual Scan</item>
 	</array>
-	
+
 	<array name="search_settings_content_atsc" translatable="false">
-		<item>Auto Scan</item>	
+		<item>Auto Scan</item>
 		<item>Manual Scan</item>
 		<item>Area</item>
 	</array>
 
 	<array name="search_settings_content_dvbt_manual" translatable="false">
-		<item>Scan Mode</item>	
+		<item>Scan Mode</item>
 		<item>Scan Band</item>
 		<item>Channel</item>
 		<item>Frequency(KHz)</item>
@@ -233,7 +233,7 @@
 	</array>
 
 	<array name="search_settings_content_dvbc_manual" translatable="false">
-		<item>Scan Mode</item>	
+		<item>Scan Mode</item>
 		<item>Scan Band</item>
 		<item>Channel</item>
 		<item>Frequency(KHz)</item>
@@ -253,7 +253,7 @@
 	</array>
 
 	<array name="Program_settings_content" translatable="false">
-		<item>Program Edit</item>	
+		<item>Program Edit</item>
 		<item>EPG</item>
 		<!--<item>Sort By</item>-->
 		<item>PVR Configure</item>
@@ -261,9 +261,9 @@
 		<item>TimeShifting</item>
 	</array>
 
-	
+
 	<array name="Program_settings_content_dvbs" translatable="false">
-		<item>Program Edit</item>	
+		<item>Program Edit</item>
 		<item>EPG</item>
 		<item>PVR Configure</item>
 		<item>PVR Manager</item>
@@ -271,21 +271,21 @@
 	</array>
 
 	<array name="record_device_content" translatable="false">
-		<item>Disk</item>	
+		<item>Disk</item>
 		<item>Timeshift Size</item>
 	</array>
 
 	<array name="pvr_manage_content" translatable="false">
-		<item>Play</item>	
+		<item>Play</item>
 		<item>Delete</item>
-		<item>Order by name</item>	
+		<item>Order by name</item>
 		<item>Order by size</item>
-		<item>Order by date</item>	
+		<item>Order by date</item>
 		<item>Search</item>
 	</array>
 
 	<array name="sort_by_content" translatable="false">
-		<item>Default</item>	
+		<item>Default</item>
 		<item>By Encrypt</item>
 		<item>By Freq</item>
 		<item>By Service Name</item>
@@ -294,25 +294,25 @@
 	<string name="invalid_input">Invalid Input</string>
 	<string name="invalid_password">Invalid password</string>
 	<string name="no_channel_stored">There are no channels stored, do you want to update the list of channels?</string>
-	
-         
+
+
 	<string name="subtitle">Subtitle</string>
 	<string name="subtitle_switch">Subtitle Switch</string>
 	<string name="screen_type ">Picture Size</string>
 	<string name="audio_track">Audio Track</string>
-	
+
 	<string name="password_set ">Set password</string>
 	<string name="sure_factory_set">Are you sure factory reset</string>
 
-    <string name="sync_time_item">Update system time</string> 
+    <string name="sync_time_item">Update system time</string>
 	<string name="sync_time">Are you sure synchronize system time by TDT time</string>
 	<string name="pvr_storage_select">Select storage device</string>
     <string name="timeshift_time_set">Timeshifting setting</string>
     <string name="parental_rating_set">Parental rating age</string>
     <string name="ttx_region">TTX Region</string>
-    <string name="lcn_switch">LCN</string>	
-    
-   
+    <string name="lcn_switch">LCN</string>
+
+
 
 	<string name="enter_cur_password">Current password</string>
 	<string name="enter_new_password">New password</string>
@@ -321,7 +321,7 @@
 	<string name="enter_password">Enter Password</string>
 
 	<string name="vchip">VChip</string>
-	<string name="closed_caption">Closed Caption</string>	
+	<string name="closed_caption">Closed Caption</string>
 	<!--Timeshifting-->
 	<string name="timeshifting_exit_message">Do you want exit timeshifting</string>
 	<string name="timeshifting_pause_message">"yes" continue,"no" exit</string>
@@ -333,8 +333,8 @@
 	<string name="usb_cant_access_file">Disk or sdcard cant access</string>
 	<string name="usbdisk_is_full">Disk is full or USB device disconnected,please check</string>
 
-     	
-  <!--DTV EPG--> 	
+
+  <!--DTV EPG-->
   	<string name="epg_sunday">Sun.</string>
   	<string name="epg_monday">Mon.</string>
     <string name="epg_tuesday">Tue.</string>
@@ -346,7 +346,7 @@
     <string name="epg_waiting">Please wait......</string>
     <string name="epg_no_epg_info">No EPG Info</string>
     <string name="epg_operate_des01">OK--BookPlay/BookRecord     		  INFO--EIT Dtails</string>
-	
+
     <string name="epg_title">EPG</string>
     <string name="epg_book">BOOK</string>
     <string name="epg_info">EPG INFO</string>
@@ -354,8 +354,8 @@
     <string name="epg_page_up">PAGE UP</string>
     <string name="epg_page_down">PAGE DOWN</string>
     <string name="epg_event_add">Event Add</string>
-    
-    
+
+
 	<!--DTV REC Manager-->
 
 	<string name="recmanager_proname">Program name</string>
@@ -373,23 +373,23 @@
   	<string name="time_shift_exit">Are you sure exit timeshifting?</string>
   	<string name="subtitle_language_set">Subtitle language set</string>
   	<string name="audio_language_set">Audio language set</string>
-      	
+
 	<!--DTV Scan-->
    	<string name="dtvscan_scansettingtitle">Channel Search</string>
 	<string name="dtvscan_manualscansettingtitle">Manual Scan</string>
 	<string name="dtvscan_scan_auto">Auto Scan</string>
-	<string name="dtvscan_scan_manual">Manual Scan</string>	
+	<string name="dtvscan_scan_manual">Manual Scan</string>
 	<string name="dtvscan_erea">Area</string>
 	<string name="dtvscandvbt_erea_uk">UK</string>
 	<string name="dtvscandvbt_erea_france">France</string>
 	<string name="dtvscandvbt_erea_australia">Australia</string>
 	<string name="dtvscandvbt_erea_italy">Italy</string>
-	<string name="dtvscandvbt_erea_taiwan">Taiwan</string>	
-	<string name="dtvscan_lcn">LCN</string>	
+	<string name="dtvscandvbt_erea_taiwan">Taiwan</string>
+	<string name="dtvscan_lcn">LCN</string>
 	<string name="dtvscan_lcn_on">on</string>
-	<string name="dtvscan_lcn_off">off</string>	
-	<string name="dtvscan_scan_mode">Scan Mode</string>	
-	<string name="dtvscan_by_frequence">By Frequency</string>	
+	<string name="dtvscan_lcn_off">off</string>
+	<string name="dtvscan_scan_mode">Scan Mode</string>
+	<string name="dtvscan_by_frequence">By Frequency</string>
 	<string name="dtvscan_by_channel">By Channel</string>
 	<string name="dtvscan_scan_band">Scan Band</string>
 	<string name="dtvscan_scan_band_vhf">VHF</string>
@@ -397,24 +397,24 @@
 	<string name="dtvscan_channel_no">Ch No</string>
 	<string name="dtvscan_base_frequence">Frequency(KHz)</string>
 	<string name="dtvscan_edit_freq">Enter Frequency</string>
-	<string name="dtvscandvbt_bandwidth">Bandwidth(M)</string>	
+	<string name="dtvscandvbt_bandwidth">Bandwidth(M)</string>
 	<string name="dtvscandvbt_scan_bandwidthauto">Auto</string>
-	<string name="dtvscan_begain_search">Search</string>	
+	<string name="dtvscan_begain_search">Search</string>
 	<string name="dtvscan_scan_manual_back">Return Back</string>
 	<string name="dtvscan_confirm">ok</string>
 	<string name="dtvscan_cancel">cancel</string>
 	<string name="dtvscan_scan_tv">TV</string>
-	<string name="dtvscan_scan_audio">Radio</string>	
+	<string name="dtvscan_scan_audio">Radio</string>
 	<string name="dtvscanatsc_erea_usa">USA</string>
 	<string name="dtvscanatsc_erea_canada">Canada</string>
-	<string name="dtvscanatsc_erea_mexico">Mexico</string>	
-	<string name="dtvscanatsc_antennapower">Antenna Power</string>	
+	<string name="dtvscanatsc_erea_mexico">Mexico</string>
+	<string name="dtvscanatsc_antennapower">Antenna Power</string>
 	<string name="dtvscanatsc_antennapower_on">on</string>
 	<string name="dtvscanatsc_antennapower_off">off</string>
 	<string name="dtvscanatsc_signaltype">Signal Type</string>
 	<string name="dtvscanatsc_signaltype_cable">Cable</string>
     <string name="dtvscanatsc_signaltype_air">Air</string>
-	<string name="dtvscanatsc_modulation">Modulation</string>	
+	<string name="dtvscanatsc_modulation">Modulation</string>
 	<string name="dtvscanatsc_modulation_qamauto">Qam Auto</string>
 	<string name="dtvscanatsc_modulation_qam16">Qam 16</string>
 	<string name="dtvscanatsc_modulation_qam32">Qam 32</string>
@@ -422,7 +422,7 @@
 	<string name="dtvscanatsc_modulation_qam128">Qam 128</string>
 	<string name="dtvscanatsc_modulation_qam256">Qam 256</string>
 	<string name="dtvscanatsc_modulation_vsb8">Vsb 8</string>
-	<string name="dtvscanatsc_modulation_vsb16">Vsb 16</string>	
+	<string name="dtvscanatsc_modulation_vsb16">Vsb 16</string>
 
 	<!--V_Chip parent control-->
 	<string name="parent_control_title">Parent Control</string>
@@ -456,13 +456,13 @@
 	<string name="cc_switch">Caption</string>
 	<string name="cc_switch_on">On</string>
 	<string name="cc_switch_off">Off</string>
-	
+
 	<string name="cc_mode_basic">Basic Selection</string>
 	<string name="cc_mode_basic_conect1">CC1</string>
 	<string name="cc_mode_basic_conect2">CC2</string>
 	<string name="cc_mode_basic_conect3">CC3</string>
 	<string name="cc_mode_basic_conect4">CC4</string>
-	
+
 	<string name="cc_mode_advance">Advanced Selection</string>
 	<string name="cc_mode_advance_conect1">Service1</string>
   	<string name="cc_mode_advance_conect2">Service2</string>
@@ -483,7 +483,7 @@
   	<string name="cc_digital_options_size_large">Large</string>
   	<string name="cc_digital_options_size_small">Small</string>
   	<string name="cc_digital_options_size_standard">Standard</string>
-	
+
   	<string name="cc_digital_options_font_sytle">Font Style</string>
   	<string name="cc_digital_options_font_sytle0">Style 0</string>
   	<string name="cc_digital_options_font_sytle1">Style 1</string>
@@ -493,11 +493,11 @@
   	<string name="cc_digital_options_font_sytle5">Style 5</string>
 	<string name="cc_digital_options_font_sytle6">Style 6</string>
 	<string name="cc_digital_options_font_sytle7">Style 7</string>
-  	
+
 	<string name="cc_digital_options_foreground_color">Foreground Color</string>
 	<string name="cc_digital_options_background_color">Background Color</string>
 
-	<string name="cc_digital_options_color_white">White</string>	
+	<string name="cc_digital_options_color_white">White</string>
 	<string name="cc_digital_options_color_black">Black</string>
 	<string name="cc_digital_options_color_red">Red</string>
 	<string name="cc_digital_options_color_green">Green</string>
@@ -508,17 +508,17 @@
 
   	<string name="cc_digital_options_foreground_opacity">Foreground Opacity</string>
 	<string name="cc_digital_options_background_opacity">Background Opacity</string>
-	
+
 	<string name="cc_digital_options_opacity_transparent">Transparent</string>
 	<string name="cc_digital_options_opacity_translucent">Translucent</string>
 	<string name="cc_digital_options_opacity_solid">Solid</string>
-	<string name="cc_digital_options_opacity_flashing">Flashing</string>	
-	
+	<string name="cc_digital_options_opacity_flashing">Flashing</string>
+
 	<string name="cc_digital_options_retune_default">Return to Default</string>
 
 
 
-	<!--menu DVBS/S2--> 
+	<!--menu DVBS/S2-->
 	<string name="scan_program">Search Setup</string>
 	<string name="dvbs_dish_setup">DISH SETUP</string>
 	<string name="dvbs_db_management">DB Management</string>
@@ -527,7 +527,7 @@
 	<string name="dvbs_unicable_switch">Unicable Switch</string>
 	<string name="dvbs_unicable_user_band">User Band</string>
 	<string name="dvbs_unicable_user_define">Unicable User Define</string>
-	
+
 	<!--menu DBM-->
 	<string name="dvbs_dbm_title">DB Management</string>
 	<string name="dvbs_dbm_load">Load from USB or SDCard</string>
@@ -536,13 +536,13 @@
 	<string name ="xml_load_success">Load satellites DB file success</string>
 	<string name ="xml_generator_success">Backup satellites DB file success</string>
 	<string name ="xml_generator_fail">Backup satellites DB file fail</string>
-	
-	<string name="operations">Operations</string>	
+
+	<string name="operations">Operations</string>
 	<string name="edit_title">Edit</string>
 	<string name="add_title">Add</string>
 	<string name="delete_title">Delete</string>
 	<string name="scan_title">Scan</string>
-	
+
 	<string name="item_no">No.</string>
 	<string name="sat_name">Satellite Name</string>
 	<string name="longitude_direction">Longitude Direction</string>
@@ -560,13 +560,13 @@
 	<string name = "dot">.</string>
 	<string name="transponder_info">Transponder Info</string>
 	<string name="can_not_search">Need Transponder Info In Some Item</string>
-	
+
 	<string name="ts_frequency">Frequency</string>
 	<string name="ts_polarity">Polarity</string>
 	<string name="ts_symbol">Symbol</string>
 	<string name="program_operation">Program Operations</string>
-	
-	
+
+
 	<string name="dish_setup_lnb_no">LNB No.</string>
 	<string name="dish_setup_lnb_type">LNB Type</string>
 	<string name="dish_setup_lnb_power">LNB Power</string>
@@ -577,21 +577,21 @@
 	<string name="dish_setup_diseqc1">DisEqc1.1</string>
 	<string name="dish_setup_diseqc2">DisEqc1.2</string>
 	<string name="dish_setup_diseqc3">DisEqc1.3</string>
-	<string name="dish_setup_committed_command">Committed Diseqc</string>	
+	<string name="dish_setup_committed_command">Committed Diseqc</string>
 	<string name="dish_setup_fast_diseqc">Fast Diseqc</string>
 	<string name="dsh_setup_diseqc_repeat">Diseqc Repeat</string>
 	<string name="dish_setup_diseqc_sequence">Diseqc Sequence</string>
 	<string name="dish_setup_uncommitted_command">Uncommitted Diseqc</string>
 	<string name="dish_setup_moto">Moto</string>
 	<string name="dish_setup_moto_number">Moto No.</string>
-	
+
 	<string name="dish_setup_conf_none">None</string>
 	<string name="dish_setup_conf_auto">Auto</string>
 	<string name="dish_setup_conf_on">On</string>
 	<string name="dish_setup_conf_off">Off</string>
 	<string name="dish_setup_conf_user_dual">User Dual</string>
 	<string name="dish_setup_conf_user_sigle">User Single</string>
-	
+
 	<string name="dish_setup_conf_lnb_low">LNB Low</string>
 	<string name="dish_setup_conf_lnb_high">LNB High</string>
 	<string name="dish_setup_conf_lnb_threshold">Threshold</string>
@@ -616,7 +616,7 @@
 	<string name="east">East</string>
 	<string name="west">West</string>
 	<string name="south">South</string>
-	<string name="north">North</string>		
+	<string name="north">North</string>
 
 	<string name="set_limit">Set Limit</string>
 	<string name="set_limit_move_continue">Move Continue</string>
@@ -628,7 +628,7 @@
 	<string name="set_position_store_position">Store Position</string>
 	<string name="set_position_goto_position">Goto Position</string>
 	<string name="set_position_goto_xx">Goto X</string>
-	
+
 
 	<string name="dish_setup_conf_sat_pos">Sat Position</string>
 	<string name="dish_setup_conf_sat_pos_a">Position A</string>
@@ -672,7 +672,7 @@
 	<string name="dish_setup_conf_button_des7_info">Set Position</string>
 	<string name="dish_setup_conf_button_des8_info">Set Location</string>
 	<string name="dish_setup_conf_set_position">Set Position</string>
-	
+
 	<string name="add_to_scanlist">Add into Scan List</string>
 	<string name="no_scan_list">"zoom out" add satellite information.</string>
 	<string name="no_data_info">"zoom out" add Transponder information.</string>
@@ -687,18 +687,18 @@
 	<string name="sat_signal_info">Satellite Signal Information</string>
 	<string name="progress">Progress</string>
 	<string name="satellites_info_list">Satellites Information</string>
-	
+
 	<!--menu settings-->
-	<string name="setting_menu_program">PROGRAM</string>  
-	<string name="setting_menu_search">SEARCH</string>   
-	<string name="setting_menu_system">SYSTEM</string>   
-	<string name="setting_menu_av">OPTION</string>   
+	<string name="setting_menu_program">PROGRAM</string>
+	<string name="setting_menu_search">SEARCH</string>
+	<string name="setting_menu_system">SYSTEM</string>
+	<string name="setting_menu_av">OPTION</string>
 	<string name="title_record_device">Record Device</string>
 	<string name="title_program_edit">Program Edit</string>
 	<string name="title_pvr_manager">PVR Manager</string>
-	
+
 	<string name="epg_exit">EXIT</string>
-	
+
 	<string name="confirm">Confirm</string>
 	<string name="exit">Exit</string>
 	<string name="exit_player">Exit Player</string>
@@ -722,7 +722,7 @@
 	<string name="repeat">Repeat</string>
 	<string name="mode">Mode</string>
 	<string name="status">Status</string>
-	
+
 	<string name="daily">Daily</string>
 	<string name="weekly">Weekly</string>
 	<string name="once">Once</string>
@@ -734,37 +734,37 @@
 
 	<array name="settings_lauguage" translatable="false">
 		<item>English</item>
-		<item>Chinese</item>   
-		<item>Thailand</item>    
-	</array>	
+		<item>Chinese</item>
+		<item>Thailand</item>
+	</array>
 
-	
+
 	<array name="lauguage_iso_639_2" translatable="false">
 		<item>eng</item>
-		<item>chi</item>  
-		<item>tha</item> 
+		<item>chi</item>
+		<item>tha</item>
 	</array>
 
 	<array name="teletext_region_lauguage" translatable="false">
 		<item>English</item>
-		<item>Deutsch</item>    
+		<item>Deutsch</item>
 		<item>Svenska/Suomi/Magyar</item>
 		<item>Italiano</item>
-		<item>Français</item>   
+		<item>Français</item>
 		<item>Português/Español</item>
-		<item>Cesky/Slovencina</item>   
+		<item>Cesky/Slovencina</item>
 		<item>Türkçe</item>
 		<item>Ellinika</item>
 		<item>Alarabia / English</item>
 		<item>Russky / Balgarski</item>
-	</array>	
+	</array>
 
 	<string name="channel_info">Channel Information</string>
 	<string name="channel_fre">Frequency</string>
-	<string name="channel_strenght">Signal Strenght</string>	
+	<string name="channel_strenght">Signal Strenght</string>
 	<string name="channel_signal_quality">Signal Quality</string>
-	<string name="channel_error_rate">Error Rate</string>	
+	<string name="channel_error_rate">Error Rate</string>
 	<string name="channel_video_pid">Video PID</string>
 	<string name="channel_audio_pid">Audio PID</string>
-	
+
 </resources>

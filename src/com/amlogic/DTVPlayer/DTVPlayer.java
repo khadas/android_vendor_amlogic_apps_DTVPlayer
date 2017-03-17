@@ -140,8 +140,10 @@ public class DTVPlayer extends DTVActivity{
 		mDTVSettings = new DTVSettings(this);
 		//TVMessage msg = TVMessage.inputSourceChanged((int)(int) TVConst.SourceInput.SOURCE_DTV.ordinal());
 		//onMessage(msg);
-		if(mDialogManager!=null)
+		if(mDialogManager!=null){
+			Log.d(TAG, "connected set:"+bHavePragram);
 			mDialogManager.setActive(bHavePragram);
+		}
 		controlUpdate(0/*cmd:setVersion*/, 0, Version);
 	}
 
@@ -152,7 +154,7 @@ public class DTVPlayer extends DTVActivity{
 
 	public void onMessage(TVMessage msg){
 		super.onMessage(msg);
-		Log.d(TAG+"-MSG", "message "+msg.getType());
+		//Log.d(TAG+"-MSG", "message "+msg.getType());
 		switch (msg.getType()) {
 			case TVMessage.TYPE_SCAN_PROGRESS:
 				
@@ -341,8 +343,10 @@ public class DTVPlayer extends DTVActivity{
 	@Override
 	protected void onResume(){
 		Log.d(TAG, ">>>>>>>>onResume<<<<<<<<");
-		if(bHavePragram)
+		if(bHavePragram){
 			mDialogManager.setActive(true);
+			Log.d(TAG,"--onResume--setActive(true)-----");
+		}
 		else
 			mDialogManager.setActive(false);
 		super.onResume();
@@ -1078,6 +1082,7 @@ public class DTVPlayer extends DTVActivity{
 		private boolean showDialogActive = true;
 		private int signal_range_min =0;
 		private int signal_range_max =0;
+		private int short_cut_Active = 0;
 
 		public void dialogManagerDestroy(){
 			if(dialogManagerHandler!=null)
@@ -1085,9 +1090,14 @@ public class DTVPlayer extends DTVActivity{
 		}
 
 		public void setActive(boolean v){
+			Log.d(TAG,"setActive:"+v);
 			showDialogActive = v;
-		}	
-
+		}
+		/*short_cut_Active 0:short menu is destory,1:is show*/
+		public void setActive(int shortcutActive){
+			Log.d(TAG,"int setActive:"+shortcutActive);
+			short_cut_Active = shortcutActive;
+		}
 		public DialogManager(Context context) {
 			this.mContext = context;
 			
@@ -1096,8 +1106,8 @@ public class DTVPlayer extends DTVActivity{
 		}
 
 		public void checkDialogDisplay(){
-				if(showDialogActive){
-					
+				if(showDialogActive&&short_cut_Active == 0){
+					Log.d(TAG, "checkDialogDisplay is show");
 					int snr = getFrontendSNR();
 					if(mDTVSettings!=null){
 						signal_range_min=mDTVSettings.getSignalQualityRangeMin();
@@ -1687,7 +1697,7 @@ public class DTVPlayer extends DTVActivity{
 				}
 				else{
 					bar_hide_count ++;
-				}		
+				}
 			} 
 		 
 			HideInformation();
@@ -2996,12 +3006,13 @@ public class DTVPlayer extends DTVActivity{
 		final CustomDialog mCustomDialog = new CustomDialog(mContext){
 			public void onShowEvent(){
 				if(mDialogManager!=null)
-					mDialogManager.setActive(false);
+					mDialogManager.setActive(1);
 			}
 
 			public void onDismissEvent(){
-				if(mDialogManager!=null)
-					mDialogManager.setActive(true);
+				if(mDialogManager!=null){
+					mDialogManager.setActive(0);
+				}
 			}
 		};
 		if(recall_tvprogram.length>=1&&DTVPlayergetRecallNumber()>1){
@@ -3085,12 +3096,12 @@ public class DTVPlayer extends DTVActivity{
 		final CustomDialog mCustomDialog = new CustomDialog(mContext){
 			public void onShowEvent(){
 					if(mDialogManager!=null)
-						mDialogManager.setActive(false);
+						mDialogManager.setActive(1);
 				}
 
 				public void onDismissEvent(){
 					if(mDialogManager!=null)
-						mDialogManager.setActive(true);
+						mDialogManager.setActive(0);
 				}
 		};
 		if(mSubtitleCount>0){
@@ -3228,13 +3239,15 @@ public class DTVPlayer extends DTVActivity{
 				}
 				
 				public void onShowEvent(){
-					if(mDialogManager!=null)
-						mDialogManager.setActive(false);
+					if(mDialogManager!=null){
+						mDialogManager.setActive(1);
+					}
 				}
 
 				public void onDismissEvent(){
-					if(mDialogManager!=null)
-						mDialogManager.setActive(true);
+					if(mDialogManager!=null){
+						mDialogManager.setActive(0);
+					}
 				}
 				
 			};	
@@ -3264,12 +3277,13 @@ public class DTVPlayer extends DTVActivity{
 		final CustomDialog mCustomDialog = new CustomDialog(mContext,R.style.MyDialog){
 			public void onShowEvent(){
 				if(mDialogManager!=null)
-					mDialogManager.setActive(false);
+					mDialogManager.setActive(1);
 			}
 
 			public void onDismissEvent(){
-				if(mDialogManager!=null)
-					mDialogManager.setActive(true);
+				if(mDialogManager!=null){
+					mDialogManager.setActive(0);
+				}
 			}
 		};
 		mCustomDialog.showDialog(R.layout.dtv_pvr_duration_time_dialog, new ICustomDialog(){
@@ -3388,14 +3402,13 @@ public class DTVPlayer extends DTVActivity{
 			
 			public void onShowEvent(){				
 				if(mDialogManager!=null){
-					mDialogManager.setActive(false);
-					Log.d(TAG,"----setActive(false)-----");
+					mDialogManager.setActive(1);
 				}	
 			}
 
 			public void onDismissEvent(){
 				if(mDialogManager!=null)
-					mDialogManager.setActive(true);
+					mDialogManager.setActive(0);
 			}
 		};
 	}
@@ -3439,13 +3452,14 @@ public class DTVPlayer extends DTVActivity{
 			public void onShowEvent(){				
 				if(mDialogManager!=null){
 					mDialogManager.setActive(false);
-					Log.d(TAG,"----setActive(false)-----");
+					Log.d(TAG,"--nit--setActive(false)-----");
 				}	
 			}
 
 			public void onDismissEvent(){
 				if(mDialogManager!=null)
 					mDialogManager.setActive(true);
+					Log.d(TAG,"--nit--setActive(true)-----");
 			}
 		};
 	}
