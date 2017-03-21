@@ -459,7 +459,7 @@ public class DTVProgramEdit extends DTVActivity{
 		public void onItemSelected(AdapterView<?> parent, View v, int position, long id){
 			ListView List_detail = (ListView) findViewById(R.id.List_detail);
 			if(ListView_channel.hasFocus() == true){
-				if(mDTVSettings.getScanRegion().contains("DVBS")==true){
+				if(mDTVSettings!=null&&mDTVSettings.getScanRegion()!=null && mDTVSettings.getScanRegion().contains("DVBS")==true){
 					ListView detail= (ListView) findViewById(R.id.List_detail);
 					if(mTVProgramList[position].getChannel()!=null){
 						int fre = mTVProgramList[position].getChannel().getParams().getFrequency();
@@ -513,7 +513,7 @@ public class DTVProgramEdit extends DTVActivity{
 						List_detail.setAdapter(listItemAdapter);
 					}
 				}
-				else if(mDTVSettings.getScanRegion().contains("DVB-C")==true){
+				else if(mDTVSettings != null && mDTVSettings.getScanRegion()!= null && mDTVSettings.getScanRegion().contains("DVB-C")==true){
 					ListView detail= (ListView) findViewById(R.id.List_detail);
 					if(mTVProgramList[position].getChannel()!=null){
 						int fre = mTVProgramList[position].getChannel().getParams().getFrequency();
@@ -567,9 +567,9 @@ public class DTVProgramEdit extends DTVActivity{
 						List_detail.setAdapter(listItemAdapter);
 					}
 				}
-				else if((mDTVSettings.getScanRegion().contains("DVB-T")==true)||
-						(mDTVSettings.getScanRegion().contains("ISDBT")==true) ||
-						(mDTVSettings.getScanRegion().contains("DTMB")==true)){
+				else if((mDTVSettings != null && mDTVSettings.getScanRegion()!= null && mDTVSettings.getScanRegion().contains("DVB-T")==true)||
+						(mDTVSettings != null && mDTVSettings.getScanRegion()!= null && mDTVSettings.getScanRegion().contains("ISDBT")==true) ||
+						(mDTVSettings != null && mDTVSettings.getScanRegion()!= null && mDTVSettings.getScanRegion().contains("DTMB")==true)){
 					ListView detail= (ListView) findViewById(R.id.List_detail);
 					if(mTVProgramList[position].getChannel()!=null){
 						int fre = mTVProgramList[position].getChannel().getParams().getFrequency();
@@ -597,7 +597,7 @@ public class DTVProgramEdit extends DTVActivity{
 
 						HashMap<String, Object> map1 = new HashMap<String, Object>();
 						map1.put("ItemTitle", "Fre:");
-						if(mDTVSettings.getScanRegion().contains("DTMB"))
+						if(mDTVSettings != null && mDTVSettings.getScanRegion()!= null && mDTVSettings.getScanRegion().contains("DTMB"))
 							map1.put("ItemText", String.valueOf(fre/1000)+"KHz");
 						else
 							map1.put("ItemText", String.valueOf(fre/1000)+"MHz");
@@ -822,6 +822,7 @@ public class DTVProgramEdit extends DTVActivity{
 	public boolean onKeyDown(int keyCode, KeyEvent event) {
 		// TODO Auto-generated method stub
 		if(!connected){
+			Log.d(TAG, "no connect");
 			return true;
 		}
 		switch (keyCode) {
@@ -897,7 +898,7 @@ public class DTVProgramEdit extends DTVActivity{
 				myAdapter.notifyDataSetChanged();
 				break;
 			case DTVActivity.KEYCODE_GOTO_BUTTON:
-				if(mDTVSettings.getScanRegion().contains("DVBS")==true){
+				if(mDTVSettings != null && mDTVSettings.getScanRegion()!= null && mDTVSettings.getScanRegion().contains("DVBS")==true){
 					showSatellitesList();
 				}
 				break;
@@ -1694,7 +1695,7 @@ public class DTVProgramEdit extends DTVActivity{
 
 			// Bind the data efficiently with the holder.
 
-			if(mDTVSettings.getScanRegion().contains("ATSC")==false){
+			if(mDTVSettings != null && mDTVSettings.getScanRegion()!= null && mDTVSettings.getScanRegion().contains("ATSC")==false){
 				//if(mDTVSettings.getLCNStatus()){
 				holder.prono.setText(Integer.toString(mTVProgramList[position].getNumber().getNumber()));
 				//}

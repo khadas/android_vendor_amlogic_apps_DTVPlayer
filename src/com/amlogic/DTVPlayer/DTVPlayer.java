@@ -1324,6 +1324,7 @@ public class DTVPlayer extends DTVActivity{
 
 					String region;
 					try {
+						Log.d(TAG,"getScanRegion set postion");
 						region = mDTVSettings.getScanRegion();
 					} catch (Exception e) {
 						e.printStackTrace();
@@ -1333,23 +1334,23 @@ public class DTVPlayer extends DTVActivity{
 
 					Log.d(TAG, "region = " + region);
 
-					if(region.contains("DVB-T"))
+					if(region != null && region.contains("DVB-T"))
 					{
 						Log.d(TAG, "goto DTVScanDVBT");
 						Intent_scan.setClass(DTVPlayer.this, DTVSettingsMenu.class);
 					}
-					else if(region.contains("ATSC"))
+					else if(region != null && region.contains("ATSC"))
 					{
 						Log.d(TAG, "goto DTVScanATSC");
 						Intent_scan.setClass(DTVPlayer.this, DTVSettingsMenu.class);
 					}
-					else if(region.contains("DVBS"))
+					else if(region != null && region.contains("DVBS"))
 					{
 						Log.d(TAG, "goto DTVScanDVBS");
 						//Intent_scan.setClass(DTVPlayer.this, DTVScanDVBS.class);
 						Intent_scan.setClass(DTVPlayer.this, DTVSettingsMenu.class);
 					}	
-					else if(region.contains("DVB-C"))
+					else if(region != null && region.contains("DVB-C"))
 					{
 						Log.d(TAG, "goto DTVScanDVBC");
 						Intent_scan.setClass(DTVPlayer.this, DTVSettingsMenu.class);				
@@ -1917,8 +1918,7 @@ public class DTVPlayer extends DTVActivity{
 		channel_info_view = (LinearLayout)getLayoutInflater().inflate(R.layout.dvbs_channel_info, null);
 		TextView fre_text = null;
 		int frequency = 0;
-
-		if(mDTVSettings.getScanRegion().contains("DVBS")){
+		if(mDTVSettings.getScanRegion() != null && mDTVSettings.getScanRegion().contains("DVBS")){
 			if(mTVProgram!=null){
 				if(mTVProgram.getChannel()!=null){
 					frequency = mTVProgram.getChannel().getParams().getFrequency();
@@ -2048,8 +2048,7 @@ public class DTVPlayer extends DTVActivity{
 		ImageView_icon_epg=(ImageView)findViewById(R.id.ImageView_icon_epg);
 		ImageView_icon_sub=(ImageView)findViewById(R.id.ImageView_icon_sub);
 		ImageView_icon_txt=(ImageView)findViewById(R.id.ImageView_icon_txt);
-
-		if(mDTVSettings.getScanRegion().contains("ATSC"))
+		if(mDTVSettings.getScanRegion() != null && mDTVSettings.getScanRegion().contains("ATSC"))
 			Text_channel_type.setText(dtvplayer_atsc_antenna_source);
 		else
 			Text_channel_type.setText(null);
@@ -2085,8 +2084,7 @@ public class DTVPlayer extends DTVActivity{
 		Log.d(TAG,"dtvplayer next event ext des:---"+dtvplayer_next_event);
 		TextView Text_parent_rate = (TextView) findViewById(R.id.Text_parent_rate);	
 		
-
-		if(mDTVSettings.getScanRegion().contains("ATSC")==false){
+		if(mDTVSettings.getScanRegion() != null && mDTVSettings.getScanRegion().contains("ATSC")==false){
 			Text_proname.setText(Integer.toString(dtvplayer_pronumber)+"  "+dtvplayer_name);
 		}
 		else{
@@ -2291,7 +2289,7 @@ public class DTVPlayer extends DTVActivity{
 		public void run() {
 			if(number_key_down){	
 				hidePasswordDialog();
-				if(mDTVSettings.getScanRegion().contains("ATSC")){
+				if(mDTVSettings.getScanRegion() != null && mDTVSettings.getScanRegion().contains("ATSC")){
 					Log.d(TAG,"prono_timer_runnable ---pronumber_string="+pronumber_string);
 					pronumber = 0;	
 					pronumber_string ="";
@@ -2386,8 +2384,7 @@ public class DTVPlayer extends DTVActivity{
 		}else{
 			debugMenuDialogShowFlag = 0x0;
 		}
-
-		if(mDTVSettings.getScanRegion().contains("ATSC")){
+		if(mDTVSettings.getScanRegion() != null && mDTVSettings.getScanRegion().contains("ATSC")){
 			if(DTVPlayerInTeletextStatus==false){
 				prono_timer_handler.removeCallbacks(prono_timer_runnable);
 				
@@ -2751,7 +2748,7 @@ public class DTVPlayer extends DTVActivity{
 		if(mTVProgram!=null){
 			TVProgram mTempTVProgram = mTVProgram;
 			dtvplayer_program_number= mTempTVProgram.getNumber();
-			if(mDTVSettings.getScanRegion().contains("ATSC")==false){
+			if(mDTVSettings.getScanRegion() != null && mDTVSettings.getScanRegion().contains("ATSC")==false){
 				
 				dtvplayer_pronumber= mTempTVProgram.getNumber().getNumber();
 				dtvplayer_pronumber_major = dtvplayer_program_number.getMajor();
@@ -2959,8 +2956,7 @@ public class DTVPlayer extends DTVActivity{
 			}
 		
 			// Bind the data efficiently with the holder.
-
-			if(mDTVSettings.getScanRegion().contains("ATSC")==false){
+			if(mDTVSettings.getScanRegion() != null && mDTVSettings.getScanRegion().contains("ATSC")==false){
 				holder.prono.setText(Integer.toString(mTVProgramList[position].getNumber().getNumber()));
 			}
 			else{
@@ -3418,7 +3414,7 @@ public class DTVPlayer extends DTVActivity{
 	private int nitTempVersion = -1;
   	protected void starNitScan()
 	{
-		if(mDTVSettings.getScanRegion().contains("DVB-T")){
+		if(mDTVSettings.getScanRegion() != null && mDTVSettings.getScanRegion().contains("DVB-T")){
 			if(mTVProgram!=null){
 				Intent intent_scan= new Intent();
 				intent_scan.setClass(DTVPlayer.this,DvbtScanResult.class);
