@@ -313,7 +313,7 @@ public class DTVPlayer extends DTVActivity{
 				}
 				break;
 			case TVMessage.TYPE_NIT_TABLE_VER_CHANGED:
-				Log.d(TAG,"----------TYPE_NIT_TABLE_VER_CHANGED--------"+msg.getReservedValue());
+				Log.d(TAG,"----------TYPE_NIT_TABLE_VER_CHANGED--------"+msg.getReservedValue()+" nit_dialog_is_show:"+nit_dialog_is_show);
 				
 				if(nitTempVersion != msg.getReservedValue()){
 					nitTempVersion = msg.getReservedValue();
@@ -322,7 +322,7 @@ public class DTVPlayer extends DTVActivity{
 				if(DTVgetNitVersion()==-1){
 					DTVSaveNitVersion(msg.getReservedValue());
 				}	
-				else if( DTVgetNitVersion() != -1 &&DTVgetNitVersion()  != msg.getReservedValue() && nit_dialog==false ){					
+				else if( DTVgetNitVersion() != -1 &&DTVgetNitVersion()  != msg.getReservedValue() && nit_dialog==false && nit_dialog_is_show==false){					
 					showNitVersionChangedDialog();
 				}
 				
@@ -3411,6 +3411,7 @@ public class DTVPlayer extends DTVActivity{
 
 
 	private boolean nit_dialog=false;
+	private boolean nit_dialog_is_show = false;
 	private int nitTempVersion = -1;
   	protected void starNitScan()
 	{
@@ -3439,23 +3440,27 @@ public class DTVPlayer extends DTVActivity{
 			}
 			public void onSetNegativeButton(){
 				 nit_dialog = true;
+				 nit_dialog_is_show = false;
 			}
 			public void onSetPositiveButton(){
 				nit_dialog = true;
 				starNitScan();
+				nit_dialog_is_show = false;	
 			}
 				
 			public void onShowEvent(){				
 				if(mDialogManager!=null){
 					mDialogManager.setActive(false);
 					Log.d(TAG,"--nit--setActive(false)-----");
-				}	
+				}
+				nit_dialog_is_show = true;
 			}
 
 			public void onDismissEvent(){
 				if(mDialogManager!=null)
 					mDialogManager.setActive(true);
 					Log.d(TAG,"--nit--setActive(true)-----");
+				nit_dialog_is_show = false;
 			}
 		};
 	}
