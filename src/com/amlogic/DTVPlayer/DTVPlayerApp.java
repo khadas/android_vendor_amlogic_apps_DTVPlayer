@@ -37,15 +37,36 @@ public class DTVPlayerApp extends Application {
 		activities.add(activity);  
 	}  
 
-	@Override  
-    	public void onTerminate() {  
-    		Log.d(TAG,"------DTV Application onTerminate-----");
-	        for (Activity activity : activities) {  
-	            activity.finish();  
-	        }  
 
-		 super.onTerminate();
-    	}  
+	public void removeActivity(Activity activity) {
+		int i = 0 ;
+		int len = 0;
+		for( len = activities.size(); i<len; ++i) {
+		  if(activities.get(i) == activity){
+		       activities.remove(i);
+		       --len;//减少一个
+		       --i;//多谢deny_guoshou指正，如果不加会出现评论1楼所说的情况。
+		       Log.d(TAG,"------DTV remove activity-----");
+		 }
+		}
+	}
+
+ 	@Override  
+     	public void onTerminate() {  
+     		Log.d(TAG,"------DTV Application onTerminate-----"); 
+	        int i = 0 ;
+			int len = 0;
+			Activity activity;
+			for( len = activities.size(); i<len; ++i) {
+				activity = activities.get(i);
+			    activity.finish();
+			    activities.remove(i);
+			    --len;//减少一个
+			    --i;//多谢deny_guoshou指正，如果不加会出现评论1楼所说的情况。
+			    Log.d(TAG,"------DTV onTerminate remove activity-----");
+			}
+			super.onTerminate();
+     	}  
 
 	public void dealHomeKey(){
 		new Thread(new Runnable(){

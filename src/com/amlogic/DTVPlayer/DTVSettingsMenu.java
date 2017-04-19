@@ -6076,7 +6076,7 @@ public class DTVSettingsMenu extends DTVActivity {
 
 		new SingleChoiseDialog(DTVSettingsMenu.this,new String[]{"2s","3s","4s","5s","6s","7s","8s","9s","10s",},pos){
 			public void onSetMessage(View v){
-				((TextView)v).setText(getString(R.string.screen_type));
+				((TextView)v).setText(getResources().getStringArray(R.array.av_settings_content)[4]);
 			}
 
 			public void onSetNegativeButton(){

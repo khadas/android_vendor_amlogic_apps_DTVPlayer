@@ -187,7 +187,7 @@ public class DTVProgramEdit extends DTVActivity{
 				{
 					//need play next
 					position = index;
-					cur_db_id=mTVProgramList[position].getID();	
+					cur_db_id=mTVProgramList[position].getID();
 					DTVPlayerPlayById(cur_db_id);
 					if(!mTVProgramList[position].getLockFlag())
 					{
@@ -263,13 +263,8 @@ public class DTVProgramEdit extends DTVActivity{
 			t.start();
 		}
 		video_axis = getVideoWindowSize();
-
 		TVSubtitleView mSubtitleView= (TVSubtitleView) findViewById(R.id.mSubtitleView);
-		/*
-		 *	#PD 110690: for some reason , bitmap heap error. disable subtitleView when create 
-		 *	ProgramEdit activity
-		 * 	Fixed me!
-		 */
+		mSubtitleView.init(true);
 		mSubtitleView.setVisible(false);
 		VideoView video_view= (VideoView) findViewById(R.id.VideoView);
 		switchScreenType(0);
@@ -288,7 +283,7 @@ public class DTVProgramEdit extends DTVActivity{
 	public void onConnected(){
 		Log.d(TAG, "connected");
 		super.onConnected();
-		showVideo();
+		//showVideo();
 		if(mDTVSettings == null)
 			mDTVSettings = new DTVSettings(this);
 		DTVChannelList_UI_Init();

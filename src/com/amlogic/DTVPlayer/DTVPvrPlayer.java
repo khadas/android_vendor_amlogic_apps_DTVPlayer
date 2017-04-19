@@ -98,7 +98,15 @@ public class DTVPvrPlayer extends DTVActivity{
 	protected void onStop(){
 		Log.d(TAG, "onStop");
 		super.onStop();
-		pvrHandler.removeCallbacks(pvrTimer);
+
+		if (pvrHandler != null) {
+			pvrHandler.removeCallbacks(pvrTimer);
+			pvrHandler = null;	
+		}
+		if (pvrStatusHandler != null) {
+			pvrStatusHandler.removeCallbacks(pvrStatusTimer);
+			pvrStatusHandler = null;	
+		}
 		stopPlayback();
 		if(mount_receiver != null)
 			unregisterReceiver(mount_receiver);

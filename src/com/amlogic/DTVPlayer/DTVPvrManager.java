@@ -41,13 +41,14 @@ import com.amlogic.widget.CheckUsbdevice;
 
 public class DTVPvrManager extends DTVActivity{
 	private static final String TAG="DTVPvrManager";
+	VideoView video_view = null;
 
 	public void onCreate(Bundle savedInstanceState){
 		Log.d(TAG, "onCreate");
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.dtv_pvr_manager);
 		writeSysFile("/sys/class/video/disable_video","2");
-		VideoView video_view= (VideoView) findViewById(R.id.VideoView);
+		video_view = (VideoView) findViewById(R.id.VideoView);
 		switchScreenType(0);
 		openVideo(video_view,null);
 

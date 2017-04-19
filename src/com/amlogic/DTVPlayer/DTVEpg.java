@@ -128,8 +128,23 @@ public class DTVEpg extends DTVActivity{
 			t.quitLoop();
 			t=null;
 		}
+		currenttimer_handler.removeCallbacks(currenttimer_runnable);
 	}
-
+	public void onDestroy() {
+		Log.d(TAG, "onDestroy");
+		super.onDestroy();
+		
+		if (t != null) {
+			/*wait the thread exit*/
+			t.quitLoop();
+			try {
+				t.join();
+				Log.d(TAG, "wait for work thread exit done!");
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+		}
+	}
 	public void onMessage(TVMessage msg){
 		Log.d(TAG, "message "+msg.getType());
 		switch (msg.getType()) {

@@ -64,7 +64,7 @@ public class DTVTimeshifting extends DTVActivity{
 		 * we need to sovle the RECORD_CONFLICT message.
 		 */
 		getTotalTime = mDTVSettings.getTimeShiftingDuration();
-		timeshiftingStatusHandler.postDelayed(timeshiftingStatusTimer, 1000); 
+		timeshiftingStatusHandler.postDelayed(timeshiftingStatusTimer, 1000);
 		startTimeshifting();
 		DTVTimeshiftingUIInit();
 		timeshiftingUIHandler.postDelayed(timeshiftingUITimer, 1000);
@@ -89,7 +89,16 @@ public class DTVTimeshifting extends DTVActivity{
 		filter.addDataScheme("file");
 		registerReceiver(mount_receiver, filter);
 	}
-
+	private void remove_handle_callback() {
+			if (timeshiftingUIHandler != null) {
+				timeshiftingUIHandler.removeCallbacks(timeshiftingUITimer);
+				timeshiftingUIHandler = null;
+			}
+			if (timeshiftingStatusHandler != null) {
+				timeshiftingStatusHandler.removeCallbacks(timeshiftingStatusTimer);
+				timeshiftingStatusHandler = null;
+			}
+	}
 	private boolean stopped = false;
 
 	@Override
@@ -97,10 +106,10 @@ public class DTVTimeshifting extends DTVActivity{
 		Log.d(TAG, "onStop");
 		if(!stopped) {
 			DTVTimeShiftingStop();
-			timeshiftingUIHandler.removeCallbacks(timeshiftingUITimer);
+			remove_handle_callback();
 			unblock();
 			if(toast!=null)
-				toast.cancel(); 
+				toast.cancel();
 			if(mount_receiver != null)
 				unregisterReceiver(mount_receiver);
 		}
@@ -110,6 +119,7 @@ public class DTVTimeshifting extends DTVActivity{
 
 	public void onDisconnected(){
 		Log.d(TAG, "disconnected");
+		remove_handle_callback();
 		super.onDisconnected();
 	}
 
@@ -123,18 +133,18 @@ public class DTVTimeshifting extends DTVActivity{
 				break;
 			case TVMessage.TYPE_SCAN_STORE_END:
 				Log.d(TAG, "Store Done !");
-				
+
 				break;
 			case TVMessage.TYPE_SCAN_END:
 				Log.d(TAG, "Scan End");
 				break;
-			case TVMessage.TYPE_RECORD_END:	
+			case TVMessage.TYPE_RECORD_END:
 				Log.d(TAG, "getErrorCode--"+msg.getErrorCode());
 				switch(msg.getErrorCode()){
 					case  TVMessage.REC_ERR_OPEN_FILE:
 						DTVTimeShiftingStop();
 						if(toast!=null)
-							toast.cancel(); 
+							toast.cancel();
 						toast = Toast.makeText(
 							DTVTimeshifting.this,
 				    		R.string.check_usb_device,
@@ -143,10 +153,10 @@ public class DTVTimeshifting extends DTVActivity{
 							toast.show();
 						gotoDTVPlayer();
 						break;
-					case  TVMessage.REC_ERR_WRITE_FILE:	
+					case  TVMessage.REC_ERR_WRITE_FILE:
 						DTVTimeShiftingStop();
 						if(toast!=null)
-							toast.cancel(); 
+							toast.cancel();
 						toast = Toast.makeText(
 							DTVTimeshifting.this,
 				    		R.string.usbdisk_is_full,

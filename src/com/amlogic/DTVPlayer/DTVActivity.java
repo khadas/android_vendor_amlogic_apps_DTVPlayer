@@ -488,6 +488,7 @@ abstract public class DTVActivity extends TVActivity{
     protected void onDestroy() {
         Log.d(TAG, "onDestroy");
 		isStop = true;
+		this.getApplicationContext().removeActivity(this);
         super.onDestroy();
     }
 

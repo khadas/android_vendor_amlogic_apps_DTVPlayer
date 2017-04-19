@@ -420,6 +420,25 @@ public class DTVPlayer extends DTVActivity{
 
 		if(mDialogManager!=null)
 			mDialogManager.dialogManagerDestroy();
+		
+		if(timer_handler!=null){
+			timer_handler.removeCallbacks(timer_runnable);
+			timer_handler = null;
+		}
+
+		if (timer_channel_info_handler != null) {
+			timer_channel_info_handler.removeCallbacks(timer_channel_info_runnable);
+			timer_channel_info_handler = null;
+		}
+
+		if (prono_timer_handler != null) {
+			prono_timer_handler.removeCallbacks(prono_timer_runnable);
+			prono_timer_handler = null;
+		}
+		if (mTask != null && mTask.getStatus() != AsyncTask.Status.FINISHED)
+		{
+            mTask.cancel(true);
+		}
 		super.onDestroy();
 	}
 
