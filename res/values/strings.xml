@@ -457,22 +457,24 @@
 	<string name="cc_switch_on">On</string>
 	<string name="cc_switch_off">Off</string>
 
-	<string name="cc_mode_basic">Basic Selection</string>
+	<string name="cc_mode_basic">Caption Track</string>
 	<string name="cc_mode_basic_conect1">CC1</string>
 	<string name="cc_mode_basic_conect2">CC2</string>
 	<string name="cc_mode_basic_conect3">CC3</string>
 	<string name="cc_mode_basic_conect4">CC4</string>
-
+	<string name="cc_mode_basic_text1">Text1</string>
+  	<string name="cc_mode_basic_text2">Text2</string>
+  	<string name="cc_mode_basic_text3">Text3</string>
+	<string name="cc_mode_basic_text4">Text4</string>
+	
 	<string name="cc_mode_advance">Advanced Selection</string>
 	<string name="cc_mode_advance_conect1">Service1</string>
   	<string name="cc_mode_advance_conect2">Service2</string>
   	<string name="cc_mode_advance_conect3">Service3</string>
 	<string name="cc_mode_advance_conect4">Service4</string>
+    <string name="cc_mode_advance_conect5">Service5</string>
+    <string name="cc_mode_advance_conect6">Service6</string>
 
-	<string name="cc_mode_advance_text1">Text1</string>
-  	<string name="cc_mode_advance_text2">Text2</string>
-  	<string name="cc_mode_advance_text3">Text3</string>
-	<string name="cc_mode_advance_text4">Text4</string>
 
 	<!--Digital Caption Options-->
 	<string name="cc_digital_options">Digital Caption Options</string>

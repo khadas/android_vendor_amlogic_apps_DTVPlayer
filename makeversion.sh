@@ -8,12 +8,12 @@ fi
 
 if test -d $DVBDIR; then
 	pushd $DVBDIR
-	DVBVERSION=`git show HEAD|grep ^commit|sed 's/^commit //'`
+	DVBVERSION=`git show HEAD|grep -a ^commit|sed 's/^commit //'`
 	popd
 fi
 
 pushd $LOCAL_PATH
-DTVPLAYERVERSION=`git show HEAD|grep ^commit|sed 's/^commit //'`
+DTVPLAYERVERSION=`git show HEAD|grep -a ^commit|sed 's/^commit //'`
 popd
 
 APKVERSION=$DVBVERSION-$DTVPLAYERVERSION

@@ -28,14 +28,14 @@ import com.amlogic.widget.SingleChoiseDialog;
 
 public class DTVCloseCaption extends DTVActivity{
 	private static final String TAG="DTVCloseCaption";
-	
+
 	ListView myView;
 	Intent intent = new Intent();
 	Bundle bundle=null;
 	IconAdapter adapter=null;
 	List<Map<String, Object>> list = null;
-	
-	static int ListItemTitle[]={R.string.cc_switch,R.string.cc_mode_basic,R.string.cc_mode_advance,R.string.cc_digital_options};
+
+	static int ListItemTitle[]={R.string.cc_switch,R.string.cc_mode_basic,R.string.cc_digital_options};
 
 	public void onCreate(Bundle savedInstanceState){
 		Log.d(TAG, "onCreate");
@@ -59,14 +59,14 @@ public class DTVCloseCaption extends DTVActivity{
 		Log.d(TAG, "message "+msg.getType());
 		switch (msg.getType()) {
 			case TVMessage.TYPE_SCAN_PROGRESS:
-				
+
 				break;
 			case TVMessage.TYPE_SCAN_STORE_BEGIN:
 				Log.d(TAG, "Storing ...");
 				break;
 			case TVMessage.TYPE_SCAN_STORE_END:
 				Log.d(TAG, "Store Done !");
-				
+
 				break;
 			case TVMessage.TYPE_SCAN_END:
 				Log.d(TAG, "Scan End");
@@ -89,28 +89,28 @@ public class DTVCloseCaption extends DTVActivity{
 		Title.setText(R.string.cc_title);
 
 		 findViewById(R.id.return_icon).setOnClickListener(
-			new View.OnClickListener(){	  
-				public void onClick(View v) {		
-					// TODO Auto-generated method stub	
+			new View.OnClickListener(){
+				public void onClick(View v) {
+					// TODO Auto-generated method stub
 					setResult(RESULT_OK,null);
 					finish();
 				}
 			}
-		);	
+		);
 	}
-	
+
 	class listOnItemClick implements OnItemClickListener{
-    	public void onItemClick(AdapterView<?> arg0, View arg1, int arg2,long position) {   
+    	public void onItemClick(AdapterView<?> arg0, View arg1, int arg2,long position) {
     		Log.d(TAG,"id---->>" + arg2+"----position----->"+position);
 			final TextView info_cur = (TextView)arg1.findViewById(R.id.info);
  			switch((int)position){
-				
+
  			    case 0:
  			    	if(getCCSwitch()){
 						info_cur.setText(R.string.cc_switch_off);
 						setCCSwitch(false);
- 			    	}	
-					else{ 
+ 			    	}
+					else{
 						info_cur.setText(R.string.cc_switch_on);
 						setCCSwitch(true);
 					}
@@ -119,26 +119,23 @@ public class DTVCloseCaption extends DTVActivity{
  				case 1:
  					showBasicSelectionDialog(info_cur);
  					break;
- 				case 2:
- 					showAdvanceSelectionDialog(info_cur);
- 					break;
-				case 3:
+				case 2:
  					intent.setClass(DTVCloseCaption.this,DTVCaptionOptions.class);
- 					startActivityForResult(intent, 14);	
+ 					startActivityForResult(intent, 14);
 					//onHide();
 					break;
  			}
-			
+
 			/*
 			int version = Integer.valueOf(android.os.Build.VERSION.SDK);
 			if (version >= 5) {
-				overridePendingTransition(R.anim.zoomin, R.anim.zoomout); 
+				overridePendingTransition(R.anim.zoomin, R.anim.zoomout);
 			}
-        	*/   	
-        	   	
-        }      	
+        	*/
+
+        }
     }
-	
+
 	private class IconAdapter extends BaseAdapter {
 		private LayoutInflater mInflater;
 		private Bitmap mIcon1;
@@ -149,7 +146,7 @@ public class DTVCloseCaption extends DTVActivity{
 
 		class ViewHolder {
 			TextView text;
-		    TextView   text2; 
+		    TextView   text2;
 		}
 
 		public IconAdapter(Context context) {
@@ -158,31 +155,31 @@ public class DTVCloseCaption extends DTVActivity{
 			mInflater=LayoutInflater.from(context);
 		}
 
-		
+
 		public int getCount() {
 			return ListItemTitle.length;
 		}
-		
+
 		public Object getItem(int position) {
 			return position;
 		}
-		
-		
+
+
 		public long getItemId(int position) {
 			return position;
 		}
-		
+
 		public boolean isEnabled(int position) {
 			if(getCCSwitch()==false){
 				if (position==1||position==2) {
 					return false;
 				}
-			}	
+			}
 		    return super.isEnabled(position);
 		}
 
 		public View getView(int position, View convertView, ViewGroup parent) {
-			Log.d(TAG,"position------->"+position);	
+			Log.d(TAG,"position------->"+position);
 			ViewHolder holder;
 			if (convertView == null) {
 				convertView = mInflater.inflate(R.layout.dtvsettings_list_item, null);
@@ -201,50 +198,46 @@ public class DTVCloseCaption extends DTVActivity{
 			// Bind the data efficiently with the holder.
 			holder.text.setText(ListItemTitle[position]);
 
-			if((getCCSwitch()==false)){  
+			if((getCCSwitch()==false)){
 				if (position==1||position==2){
 					holder.text.setTextColor(Color.GRAY);
 					holder.text2.setTextColor(Color.GRAY);
 				}
-			}	
+			}
 			else{
-				//holder.icon.setImageBitmap(mIcon1);		
-				//convertView.setBackgroundColor(Color.TRANSPARENT); 
+				//holder.icon.setImageBitmap(mIcon1);
+				//convertView.setBackgroundColor(Color.TRANSPARENT);
 				holder.text.setTextColor(Color.WHITE);
 				holder.text2.setTextColor(Color.YELLOW);
-			}	
-		  	
+			}
+
 			switch(position){
-				case 0: 
+				case 0:
 					if(getCCSwitch())
 						holder.text2.setText(R.string.cc_switch_on);
-					else 
+					else
 						holder.text2.setText(R.string.cc_switch_off);
 					holder.text2.setVisibility(View.VISIBLE);
 					break;
-				case 1: 
+				case 1:
 					holder.text2.setText(getBasicSelection());
 					holder.text2.setVisibility(View.VISIBLE);
 					break;
 				case 2:
-					holder.text2.setText(getAdvanceSelection());
-					holder.text2.setVisibility(View.VISIBLE);
-					break;
-				case 3:
 					holder.text2.setText(null);
 					break;
 			}
-		  
+
 			return convertView;
 		}
-	}	
-			
-	protected void onListItemClick(ListView l, View v, int position, long id){
-		Log.d(TAG,"onListItemClick----->>"+position);	
 	}
-		
+
+	protected void onListItemClick(ListView l, View v, int position, long id){
+		Log.d(TAG,"onListItemClick----->>"+position);
+	}
+
 	public void setCCSwitch(boolean c){
-		setConfig("tv:atsc:cc:enable",c);		
+		setConfig("tv:atsc:cc:enable",c);
 	}
 
 	public boolean getCCSwitch(){
@@ -253,105 +246,84 @@ public class DTVCloseCaption extends DTVActivity{
 		return mode;
 	}
 
+	int BasicSelection_menu_items[] = {
+		R.string.cc_mode_basic_conect1,
+		R.string.cc_mode_basic_conect2,
+		R.string.cc_mode_basic_conect3,
+		R.string.cc_mode_basic_conect4,
+		R.string.cc_mode_basic_text1,
+		R.string.cc_mode_basic_text2,
+		R.string.cc_mode_basic_text3,
+		R.string.cc_mode_basic_text4,
+		R.string.cc_mode_advance_conect1,
+		R.string.cc_mode_advance_conect2,
+		R.string.cc_mode_advance_conect3,
+		R.string.cc_mode_advance_conect4,
+		R.string.cc_mode_advance_conect5,
+		R.string.cc_mode_advance_conect6
+	};
+
 	public void setBasicSelectionMode(int value){
-		return;				
+		setConfig("tv:atsc:cc:caption", value);
+		return;
 	}
 
 	public String[] getBasicSelectionItems(){
-		String[] items=new String[]{"CC1","CC2","CC3"};
+		String[] items=new String[]{"CC1","CC2","CC3","CC4","Text1","Text2","Text3","Text4",
+			"Service1","Service2","Service3","Service4","Service5","Service6"};
 		return items;
 	}
 
 	public int getBasicSelectionMode(){
 		int mode=0;
+		mode = getIntConfig("tv:atsc:cc:caption");
 		return mode;
 	}
+
 	public String getBasicSelection(){
-		String value=" ";
-		return value;
+		int mode = 0;
+		mode = getIntConfig("tv:atsc:cc:caption");
+		return getString(BasicSelection_menu_items[mode]);
 	}
 
-	public void setAdvanceSelectionMode(int value){
-		return;				
-	}
-
-	public String[] getAdvanceSelectionItems(){
-		String[] items=new String[]{"Service1","Service2","Service3"};
-
-		return items;
-	}
-	public int getAdvanceSelectionMode(){
-		int mode=0;
-		return mode;
-	}
-
-	public String getAdvanceSelection(){
-		String value=" ";
-		return value;
-	}
-
-	
 	private void showBasicSelectionDialog(TextView v){
 		final TextView info_cur = v;
 
 		int pr = getBasicSelectionMode();
 		int pos = pr;
 		String items[] = getBasicSelectionItems();
-		
+
 		new SingleChoiseDialog(DTVCloseCaption.this,items,pos){
 			public void onSetMessage(View v){
 				((TextView)v).setText(getString(R.string.cc_mode_basic));
 			}
 
 			public void onSetNegativeButton(){
-				
+
 			}
 			public void onSetPositiveButton(int which){
 				setBasicSelectionMode(which);
 				info_cur.setText(getBasicSelection());
 			}
 		};
-	}	
+	}
 
-
-	private void showAdvanceSelectionDialog(TextView v){
-		final TextView info_cur = v;
-
-		int pr = getAdvanceSelectionMode();
-		int pos = pr;
-		String items[] = getAdvanceSelectionItems();
-		
-		new SingleChoiseDialog(DTVCloseCaption.this,items,pos){
-			public void onSetMessage(View v){
-				((TextView)v).setText(getString(R.string.cc_mode_basic));
-			}
-
-			public void onSetNegativeButton(){
-				
-			}
-			public void onSetPositiveButton(int which){
-				setBasicSelectionMode(which);
-				info_cur.setText(getBasicSelection());
-			}
-		};
-	}	
-			
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 		// TODO Auto-generated method stub
 		Log.d(TAG,"onActivityResult");
-		int p=-1;	
+		int p=-1;
 		if(data!=null){
 			Bundle bundle =data.getExtras();
-			p = bundle.getInt("position");			
-		}		
-		
+			p = bundle.getInt("position");
+		}
+
 		if(resultCode == RESULT_OK){
 			switch(requestCode){
 				case 14:
 					//onShow();
 					break;
 			}
-		}	
+		}
 	}
 
 	public boolean onKeyDown(int keyCode, KeyEvent event) {
@@ -362,22 +334,22 @@ public class DTVCloseCaption extends DTVActivity{
 	   switch (keyCode) {
 		case KeyEvent.KEYCODE_DPAD_LEFT:
 			Log.d(TAG,"KEYCODE_DPAD_LEFT");
-			break;		
-		case KeyEvent.KEYCODE_DPAD_RIGHT:	
+			break;
+		case KeyEvent.KEYCODE_DPAD_RIGHT:
 			Log.d(TAG,"KEYCODE_DPAD_RIGHT");
 			break;
-		case KeyEvent.KEYCODE_BACK:	
+		case KeyEvent.KEYCODE_BACK:
 			setResult(RESULT_OK,null);
 			break;
 		}
 		return super.onKeyDown(keyCode, event);
-	}	  
+	}
 
 	private  void onHide(){
 		RelativeLayout RelativeLayoutParent = (RelativeLayout)findViewById(R.id.RelativeLayoutParent);
 		RelativeLayoutParent.setVisibility(View.INVISIBLE);
-	} 
-	
+	}
+
 	private void onShow(){
 		RelativeLayout RelativeLayoutParent = (RelativeLayout)findViewById(R.id.RelativeLayoutParent);
 		RelativeLayoutParent.setVisibility(View.VISIBLE);

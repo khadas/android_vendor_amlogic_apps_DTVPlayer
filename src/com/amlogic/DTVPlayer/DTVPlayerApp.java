@@ -44,8 +44,8 @@ public class DTVPlayerApp extends Application {
 		for( len = activities.size(); i<len; ++i) {
 		  if(activities.get(i) == activity){
 		       activities.remove(i);
-		       --len;//减少一个
-		       --i;//多谢deny_guoshou指正，如果不加会出现评论1楼所说的情况。
+		       --len;
+		       --i;
 		       Log.d(TAG,"------DTV remove activity-----");
 		 }
 		}
@@ -61,8 +61,8 @@ public class DTVPlayerApp extends Application {
 				activity = activities.get(i);
 			    activity.finish();
 			    activities.remove(i);
-			    --len;//减少一个
-			    --i;//多谢deny_guoshou指正，如果不加会出现评论1楼所说的情况。
+			    --len;
+			    --i;
 			    Log.d(TAG,"------DTV onTerminate remove activity-----");
 			}
 			super.onTerminate();
